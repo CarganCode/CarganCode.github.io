@@ -1,0 +1,18 @@
+.post{
+	.post-header{
+		margin-bottom: 40px;
+		
+		h1{
+			margin: 0;
+		}
+		.meta{
+			color: $accent-color;
+		}
+	}
+	blockquote {
+		margin: 0;
+		border-left: 4px solid #DDD;
+		padding: 0 15px;
+		color: #777;
+	}
+}

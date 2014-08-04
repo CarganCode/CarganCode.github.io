@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="700px"
+	 height="700px" viewBox="0 0 700 700" enable-background="new 0 0 700 700" xml:space="preserve">
+<g id="Layer_1">
+	<path fill="#1FA368" d="M583.695,89.444C655.089,153.521,700,246.516,700,350c0,193.3-156.7,350-350,350
+		c-77.366,0-148.869-25.102-206.809-67.605"/>
+	<path fill="#22B573" d="M143.191,632.395C56.367,568.702,0,465.934,0,350C0,156.7,156.7,0,350,0
+		c89.816,0,171.73,33.83,233.695,89.444"/>
+</g>
+<g id="Layer_2">
+	<g>
+		<path fill="#848484" d="M606,200.938c0,9.423-7.639,17.062-17.062,17.062h-21.877c-9.423,0-17.062-7.639-17.062-17.062v-21.877
+			c0-9.423,7.639-17.062,17.062-17.062h21.877c9.423,0,17.062,7.639,17.062,17.062V200.938z"/>
+		<rect x="50" y="183" fill="#7F7C7D" width="600" height="329"/>
+		<rect x="50" y="264" fill="#FF5615" width="600" height="171"/>
+		<g>
+			<g>
+				<circle fill="#515151" cx="350.726" cy="371.564" r="142.18"/>
+				<circle fill="#55575B" cx="350.725" cy="371.564" r="121.902"/>
+				<circle opacity="0.4" cx="350.725" cy="371.564" r="64.158"/>
+				<circle opacity="0.8" cx="350.726" cy="371.564" r="51.327"/>
+				<circle fill="#666666" cx="368.356" cy="352.228" r="10.843"/>
+				<ellipse fill="#666666" cx="332.604" cy="393.685" rx="4.632" ry="5.339"/>
+			</g>
+			<g>
+				<circle opacity="0.2" fill="#0042B1" cx="350.725" cy="371.564" r="141.149"/>
+			</g>
+		</g>
+		<rect x="67" y="193" fill="#161616" width="114" height="52"/>
+		<polygon fill="#4C4B4B" points="115.389,197 69,231.557 69,197 		"/>
+		<polygon fill="#302F2F" points="179,197 179,243 69,243 69,231.557 115.389,197 		"/>
+		<rect x="81" y="200" fill="#FFFFFF" width="43" height="19"/>
+	</g>
+</g>
+</svg>

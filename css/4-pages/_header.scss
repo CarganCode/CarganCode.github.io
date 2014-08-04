@@ -1,0 +1,33 @@
+.site-header {
+	#site-title{
+		text-align:center;
+		a{
+		  color: $titile-color;
+		}
+	}
+	
+	#tag-line{
+		text-align:center;
+		color: $titile-color;
+	
+	}
+	#nav {
+		float: left;
+		padding-left: 30px;
+		position: relative;
+		top: -220px
+	}
+	
+	.logo{
+		height: 0;
+		svg{
+			max-height: 300px;
+			position: relative;
+			top: -200px;
+			z-index: -1;
+		}
+	
+	}
+	
+	
+}
