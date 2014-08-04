@@ -1,9 +1,9 @@
 <div>
 <a href="{{ include.link }}" rel="shadowbox{% if include.group %}[{{include.group}}];{% endif %}" >
 	<img src="{{ include.link }}" style="{% if include.width %}
-		width:{{ include.width }}px; 
+		max-width:{{ include.width }}px; 
 	{%elsif include.height %}
-		height: {{include.height}}px;
+		max-height: {{include.height}}px;
 	{% endif %}">
 </a>
 <div>
