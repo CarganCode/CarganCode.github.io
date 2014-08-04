@@ -10,6 +10,7 @@ github_username:  timcargan
 # Build settings
 markdown: kramdown
 permalink: pretty
+pygments: true
 highlighter: true
 
 sass:
