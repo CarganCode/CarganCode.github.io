@@ -1,5 +1,4 @@
-pre,
-code {
+pre, code{
   border: 1px solid #d5d5e9;
   background-color: #D5D5D5;
   padding: 8px 12px;
@@ -17,6 +16,8 @@ code {
   padding-right: 0;
   padding-left: 0;
 }
+
+.highlight { overflow:scroll; }
 
 .highlight  { background: #ffffff; }
 .highlight .c { color: #a50; font-style: italic } /* Comment */
