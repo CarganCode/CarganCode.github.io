@@ -15,7 +15,11 @@
 		float: left;
 		padding-left: 30px;
 		position: relative;
-		top: -220px
+		top: -220px;
+		
+		.page-link {
+			padding-right: 10px;
+		}
 	}
 	
 	.logo{

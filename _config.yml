@@ -1,7 +1,7 @@
 # Site settings
 title: Cargan Code
 email: tim@cargancode.com
-description: "This is a website, yes I know. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it. Copyright © 2014 CarganCode Inc. & all its awesomeness"
+description: "This is a website, yes I know. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it."
 baseurl: ""
 url: "http://cargancode.com"
 twitter_username: timcargan
@@ -11,7 +11,9 @@ github_username:  timcargan
 markdown: kramdown
 permalink: pretty
 pygments: true
-highlighter: true
+
+paginate: 10
+paginate_path: "blog/page:num"
 
 sass:
     sass_dir: css/
