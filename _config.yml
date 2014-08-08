@@ -1,9 +1,9 @@
 # Site settings
-title: Cargan Code
+title: CarganCode
 email: tim@cargancode.com
 description: "This is a website, yes I know. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it."
 baseurl: ""
-url: "http://cargancode.com"
+url: "http://cargancode.io"
 twitter_username: timcargan
 github_username:  timcargan
 

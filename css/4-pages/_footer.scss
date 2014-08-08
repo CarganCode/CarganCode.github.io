@@ -5,11 +5,13 @@
   
   .wrap {
   	display: table;
+  	max-width: 800px;
   }
   .column { 
-  display: table-cell;
-  padding: 0 5px; 
-  width: 33%;
+  	display: table-cell;
+  	marign-bottom: 15px;
+  	padding: 0 5px; 
+  	width: 33%;
   }
   
   ul { 
