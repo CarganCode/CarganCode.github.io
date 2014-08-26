@@ -28,6 +28,11 @@ h1, h2, h3, h4, h5, h6
   font-size: 22px
   line-height: 1.38
 
+.normal, normal
+  font-size: 14px
+  font-weight: initial
+  line-height: 1.6
+
 .small, small 
   font-size: 10px
   line-height: 1.2
@@ -48,7 +53,17 @@ hr
   margin: 10px 0 30px
   height: 0
 
+.hr_color
+  border: 0
+  height: 1px
+  background: #f1c40f
+  background-image: -webkit-linear-gradient(left, red, orange, #f1c40f, green, blue, indigo, violet)
+  background-image: -moz-linear-gradient(left, red, orange, #f1c40f, green, blue, indigo, violet)
+  background-image: -ms-linear-gradient(left, red, orange, #f1c40f, green, blue, indigo, violet)
+  background-image: -o-linear-gradient(left, red, orange, #f1c40f, green, blue, indigo, violet)
 
+.text_center
+  text-align: center
 
 // Links
 
@@ -96,7 +111,16 @@ body
   text-align: center
   line-height: 36px
 
+.img_center
+  display: block
+  margin: 0 auto
+
 // Basic Styles
+
+.row
+  display: table-row
+.cell
+  display: table-cell
 
 body
   background: $bg-color

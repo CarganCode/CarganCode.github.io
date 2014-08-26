@@ -12,6 +12,8 @@ layout: default
 	{% include icons/pencil_circle.svg %}
 </div>
 
+<hr class="hr_color">
+
 <div class="post-list-wrap">
   <h2>Posts</h2>
 
@@ -41,13 +43,14 @@ layout: default
 						{% endif %}
 					</span>
 				{% endfor %}
-			</div>
-		</a>
+    			</div>
+    		</a>
 		
         <span class"post-exert"> {{ post.excerpt | markdown }} </span>
         <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
-        
+      
       </li>
+      <hr>
     {% endfor %}
   </ul>
 </div>

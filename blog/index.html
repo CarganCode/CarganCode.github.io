@@ -2,11 +2,10 @@
 layout: default
 ---
 
+
+<h1>Blog</h1>
+
 <div class="post-list-wrap">
-  <div class="blog-page-title">
-  	<h2>Blog</h2>
-  </div>
-  	
 
   <ul class="posts">
     {% for post in paginator.posts %}
@@ -27,20 +26,22 @@ layout: default
 	      	<div class="post-meta">
 		        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
 		        -
-				{% for categorie in post.categories %}
-					<span class="post-categorie">{{categorie}} 
-						{% if categorie != post.categories.last %}
-							,
-						{% endif %}
-					</span>
-				{% endfor %}
-			</div>
-		</a>
-		
+				    {% for categorie in post.categories %}
+    					<span class="post-categorie">{{categorie}} 
+    						{% if categorie != post.categories.last %}
+    							,
+    						{% endif %}
+    					</span>
+				    {% endfor %}
+			    </div>
+		    </a>
+		    
+        <br>
         <span class"post-exert"> {{ post.excerpt | markdown }} </span>
         <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
-        
+    
       </li>
+      <hr>
     {% endfor %}
   </ul>
 </div>

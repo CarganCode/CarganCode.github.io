@@ -21,7 +21,7 @@
 			padding-right: 10px;
 		}
 	}
-	
+
 	.logo{
 		height: 0;
 		align-content: center;
@@ -33,6 +33,19 @@
 		}
 	
 	}
-	
-	
+}
+
+@media only screen and (max-device-width: 390px)  {
+	.site-header #site-title {
+		margin-top: 22px;
+		margin-bottom: 0;	
+	}
+	.site-header #tag-line {
+		margin-top: 0;	
+	}
+}
+@media only screen and (max-device-width: 285px)  {
+	.site-header #tag-line {
+		margin-bottom: 0;	
+	}
 }
