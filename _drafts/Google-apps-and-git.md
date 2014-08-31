@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "autoCrat bugs"
-date:   2014-08-7 12:34:56
+title: "autoCrat bugs"
+date: 2014-08-7 12:34:56
 categories: code
+type: code
 ---
 	
 As you may or may not know, I wright/ maintain the somewhat popular Google Drive add-on autoCrat. We just passed 13,000 users however more importantly, about 2 weeks about I published my biggest update to date. It has a new sleeker look and feel, new functionality and (in theory) is faster at merging docs. The trouble is for the last two weeks autoCrat has been plaged with bugs I've never seen in testing.
