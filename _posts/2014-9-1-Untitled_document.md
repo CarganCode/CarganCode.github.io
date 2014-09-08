@@ -3,7 +3,7 @@ layout: post
 title: Untitled document
 date: 2014-09-01T14:51:11.002Z
 ---
-<body class="c5">
+<body class="c10">
 	<p style="widows:2;orphans:2;direction:ltr">
 		<span>This is another post written in Jekyll, but this time there is no markdown! Just html formatting so thats a win. &lt;h1&gt; inline ? &lt;/h3&gt;</span>
 		<span style="color:#1155cc;text-decoration:underline">
@@ -19,8 +19,7 @@ date: 2014-09-01T14:51:11.002Z
 		</span>
 	</p>
 	<h2 style="widows:2;orphans:2;direction:ltr;page-break-after:avoid">
-		<a />
-		<span>Example header</span>
+				<span>Example header</span>
 	</h2>
 	<p style="widows:2;orphans:2;direction:ltr">
 		<span style="font-size:24pt">This is big Text</span>
@@ -55,7 +54,7 @@ date: 2014-09-01T14:51:11.002Z
 		<li style="padding-left:0pt;widows:2;orphans:2;direction:ltr;margin-left:36pt">
 			<span>yeah</span>
 		</li>
-		<li style="padding-left:0pt;widows:2;orphans:2;direction:ltr;margin-left:36pt;height:11pt">
+		<li style="padding-left:0pt;widows:2;orphans:2;height:11pt;direction:ltr;margin-left:36pt">
 			<span />
 		</li>
 	</ol>
