@@ -3,7 +3,7 @@ layout: post
 title: Introducing Drekyll!
 date: 2014-09-01T14:51:11.002Z
 ---
-<body class="c4">
+<body class="c6">
 	<p>
 		<span>So im new to Jekyll and so far I’m loving it, I already use it for two of my sites (this and TeenTech's website). My only complaint is that I couldn't find a good Markdown editor. I'm Dyslexic and my spelling is atrocious, when i'm writing lots of text I want to use an editor with good spell check and all the other niceties. The trouble is most text editors, such as Sublime or Textwrangler, are use primarily for coding. As such they have no or a very limited spell check. My first thought was to use MS Word as a text editor but it turns out that editing Markdown files in Word doesn't work all that well. It was when I was playing around with some autoCrat stuff that it hit me. I could use Google docs!</span>
 	</p>
@@ -23,31 +23,20 @@ date: 2014-09-01T14:51:11.002Z
 	<p>
 		<span>eg</span>
 	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;">{% highlight javascript linnos %}</span>
-	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;"//We can have block code</span>
-	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;">!code!/* With syntax highlighting! */</span>
-	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;">!code!function test(var someting)</span>
-	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;">!code!{ var this = document.getelementbyid("test"); for (var i = 0; i &lt; someting; i ++){ !code!doSometingAwesome("yes thats right!") } return "It did everything and more" }</span>
-	</p>
-	<p>
-		<span style="color:#333333;font-size:12pt;">{% endhighlight %}</span>
-	</p>
+	
+{% highlight javascript linnos %}
+//We can have block code
+/* With syntax highlighting! */
+function test(var someting){
+	var this = document.getelementbyid("test");
+	for (var i = 0; i &lt; someting; i 		){
+		doSometingAwesome("yes thats right!")
+	}
+	return "It did everything and more"
+}
+{% endhighlight %}
+
 	<p style="height:11pt;">
 		<span />
 	</p>
-	<p style="height:11pt;">
-		<span />
-	</p>
-	<p style="height:11pt;">
-		<span />
-	</p>
-</body>
+	</body>
