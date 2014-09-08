@@ -8,7 +8,7 @@ date: 2014-09-01T14:51:11.002Z
 
 	
 <!--more-->
-	<span style="font-style:italic;text-decoration:underline;font-weight:bold;">Underline   
+Underline   
 	
 Google docs would be perfect, they have a solid spell check and all the other stuff you want from a text editor and as an added bonuses everything is saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!   
 	
