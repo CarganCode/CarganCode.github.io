@@ -6,7 +6,7 @@ categories: misc
 ---
 
 Yeah thats right I'm back, but in the past!! Well kinda, I wrote this after the Code Code Code post was done but this one shows up before!
-
+<!--more-->
 So technically this is my first real post since the Code Code Code post is based off of the one Jekyll made.
 
 As you saw from the home screen this is a writing post. no code or pics just words..

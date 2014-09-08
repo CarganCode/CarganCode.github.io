@@ -7,7 +7,7 @@ type: code
 ---
 
 This was once the auto generated post, or as Jekyll says `post`, yeah thats right, inline code BAM! 
-
+<!--more-->
 Ok so now you are like WOW inline code thats cool. But wait theres more:
 
 {% highlight javascript linnos %}
