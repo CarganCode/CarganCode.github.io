@@ -22,7 +22,8 @@ Google docs would be perfect, they have a solid spell check and all the other st
 Through the power of Google Apps Script and Github Api. Posting a formatted google doc to a Jekyll powered site can be done from the push of a button. Google automagicly adds all the needed Html Tags if you don't like markdown. but you can still have the power of markdown through the use of some magic regex’s.
 
 eg, Here is some inline code:
-<code>{% highlight javascript linnos %}
+
+% highlight javascript linnos %}
 //We can have block code
 /* With syntax highlighting! */
 function test(var someting){
@@ -32,6 +33,7 @@ function test(var someting){
    }
    return "It did everything and more"
 }
-{% endhighlight %}</code>
+{% endhighlight %}
+
 But I admit its not perfect, to use the syntax highlighter you need to wrap it in a `&lt;code&gt;&lt;/code&gt;` tag.
 
