@@ -3,7 +3,7 @@ layout: post
 title: Untitled document
 date: 2014-09-01T14:51:11.002Z
 ---
-<body class="c7">
+<body class="c5">
 	<p style="widows:2;orphans:2;direction:ltr">
 		<span>This is another post written in Jekyll, but this time there is no markdown! Just html formatting so thats a win. &lt;h1&gt; inline ? &lt;/h3&gt;</span>
 		<span style="color:#1155cc;text-decoration:underline">
