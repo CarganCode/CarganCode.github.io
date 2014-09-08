@@ -28,11 +28,11 @@ date: 2014-09-01T14:51:11.002Z
 //We can have block code
 /* With syntax highlighting! */
 function test(var someting){
-	var this = document.getelementbyid("test");
-	for (var i = 0; i &lt; someting; i 		){
-		doSometingAwesome("yes thats right!")
-	}
-	return "It did everything and more"
+var this = document.getelementbyid("test");
+for (var i = 0; i &lt; someting; i 		){
+doSometingAwesome("yes thats right!")
+}
+return "It did everything and more"
 }
 {% endhighlight %}
 
