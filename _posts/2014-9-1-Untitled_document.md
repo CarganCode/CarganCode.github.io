@@ -11,7 +11,6 @@ date: 2014-09-01T14:51:11.002Z
 		</span>
 	</p>
 	<h2 style="widows:2;orphans:2;direction:ltr;page-break-after:avoid">
-		
 		<span>Example header</span>
 	</h2>
 	<p style="widows:2;orphans:2;direction:ltr">
