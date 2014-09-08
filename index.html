@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<h1> Welcome! </h1>
+<p> This is a website, one of them things on the interwebs. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it.
+</p>
+<div class="types"> 
+	{% include icons/teletype.svg %} 
+	{% include icons/camra.svg %} 
+	{% include icons/pencil_circle.svg %}
+</div>
+
+<hr class="hr_color">
+
+<h1>Blog</h1>
+
+{% include posts.html posts=site.posts %}
