@@ -11,57 +11,43 @@ So im new to Jekyll and so far I’m loving it, I already use it for two of my s
 
 <span style="font-style:italic;text-decoration:underline;font-weight:bold;">Underline
 
-
 Google docs would be perfect, they have a solid spell check and all the other stuff you want from a text editor and as an added bonuses everything is saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
 
 <h3 style="page-break-after:avoid;">
-	Introducing Drekyll
-</h3>
+
+				Introducing Drekyll
+
+	</h3>
 
 Through the power of Google Apps Script and Github Api. Posting a formatted google doc to a Jekyll powered site can be done from the push of a button. Google automagicly adds all the needed Html Tags if you don't like markdown. but you can still have the power of markdown through the use of some magic regex’s.
 
-
 eg, Here is some inline code:
-
 
 &lt;code&gt;
 
-
 {% highlight javascript linnos %}
-
 
 //We can have block code
 
-
 /* With syntax highlighting! */
-
 
 function test(var someting){
 
-
 ~var this = document.getelementbyid("test");
-
 
 ~for (var i = 0; i &lt; someting; i ++){
 
-
 ~~doSometingAwesome("yes thats right!")
-
 
 ~}
 
-
 ~return "It did everything and more"
-
 
 }
 
-
 {% endhighlight %}
 
-
 &lt;/code&gt;
-
 
 But I admit its not perfect, to use the syntax highlighter you need to wrap it in a `&lt;code&gt;&lt;/code&gt;` tag.
 
