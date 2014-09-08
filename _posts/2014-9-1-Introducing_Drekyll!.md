@@ -6,7 +6,7 @@ type: blog
 categories: project
 tags: Apps-Script Code Drekyll Github Project
 ---
-<body class="c0">
+<body class="c7">
 	<p>
 		<span>So im new to Jekyll and so far I’m loving it, I already use it for two of my sites (this and TeenTech's website). My only complaint is that I couldn't find a good Markdown editor. I'm Dyslexic and my spelling is atrocious, when i'm writing lots of text I want to use an editor with good spell check and all the other niceties. The trouble is most text editors, such as Sublime or Textwrangler, are use primarily for coding. As such they have no or a very limited spell check. My first thought was to use MS Word as a text editor but it turns out that editing Markdown files in Word doesn't work all that well. It was when I was playing around with some autoCrat stuff that it hit me. I could use Google docs!</span>
 	</p>
@@ -21,6 +21,30 @@ tags: Apps-Script Code Drekyll Github Project
 				<span>Introducing Drekyll</span>
 	</h3>
 	<p>
-		<span>Through the power of Google Apps Script and Github Api. Posting a Markdown formatted google doc to a Jekyll powered site can be done from the push of a button.</span>
+		<span>Through the power of Google Apps Script and Github Api. Posting a formatted google doc to a Jekyll powered site can be done from the push of a button. Google automagicly adds all the needed Html Tags if you don't like markdown. but you can still have the power of markdown through the use of some magic regex’s.</span>
+	</p>
+	<p>
+		<span>eg</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">{% highlight javascript linnos %}</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">//We can have block code</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">/* With syntax highlighting! */</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">function test(var someting)</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">{ var this = document.getelementbyid("test"); for (var i = 0; i &lt; someting; i ++){ doSometingAwesome("yes thats right!") } return "It did everything and more" }</span>
+	</p>
+	<p>
+		<span style="color:#333333;font-size:12pt;">{% endhighlight %}</span>
+	</p>
+	<p style="height:11pt;">
+		<span />
 	</p>
 	</body>
