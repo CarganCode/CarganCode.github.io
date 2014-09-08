@@ -1,0 +1,19 @@
+[
+	{	
+		name: "Tim",
+		time: "12:34 1-9-2014",
+		post: "This is a static comment"
+	},
+
+	{
+		name: "Tim 2",
+		time: "10:34 2-9-2014",
+		post: "This is a static yeah comment"
+	},
+
+	{
+		name: "Tim 4",
+		time: "02:34 3-9-2014",
+		post: "Thi"
+	}
+]

@@ -1,23 +1,6 @@
----
-layout: default
----
-
-<h1> Welcome! </h1>
-<p> This is a website, one of them things on the interwebs. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it.
-</p>
-<div class="types"> 
-	{% include icons/teletype.svg %} 
-	{% include icons/camra.svg %} 
-	{% include icons/pencil_circle.svg %}
-</div>
-
-<hr class="hr_color">
-
-<h2>Blog</h2>
-
 <div class="post-list-wrap">
   <ul class="posts">
-    {% for post in site.posts %}
+    {% for post in include.posts %}
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <div class="type"> 
@@ -30,7 +13,9 @@ layout: default
             
             {% endif %}
           </div>
+       
           <h2>{{ post.title }}</h2>
+        </a>
         
           <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
@@ -43,7 +28,7 @@ layout: default
               </span>
             {% endfor %}
           </div>
-        </a>
+        
         
         <br>
         <span class"post-exert"> {{ post.excerpt | markdown }} </span>

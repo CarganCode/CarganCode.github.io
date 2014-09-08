@@ -1,0 +1,29 @@
+<div class="comments">
+	<h2> Comments </h2>
+
+	{% for comment in site.data.comments[include.postId] %}
+		<div class="comment" >
+			<span class="comment_name"> {{comment.name}} - <span class="small"> {{comment.time}} </span> </span>
+			<br>
+			<span> {{comment.post}} </span>
+			<hr>
+		</div>
+	{% endfor %}
+
+	<h3> Post a reply </h3>
+
+	<form action=postComment >
+		<input name="name" id="pc_name" type=text placeholder="Name"> 
+		<textarea name="comment" id="pc_comment" style="width:90%;" rows="5" placeholder="Write a comment..."></textarea>	
+		<input name="postId" value="{{include.postId}}" type=hidden>
+		<br>
+		<button onclick="postComment()"> Post </button>
+	</form>
+
+	<script>
+		function postComment(){
+			var name = document.getElementById("pc_name").value
+			alert(name + "says posted")
+		}
+	</script>
+</div>

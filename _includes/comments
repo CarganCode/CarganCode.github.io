@@ -1,0 +1,5 @@
+<div class="comments">
+	{%for comment in data[postId].comments % }
+		<p> {{ comment}} </p>
+	{%end for%}
+</div>
