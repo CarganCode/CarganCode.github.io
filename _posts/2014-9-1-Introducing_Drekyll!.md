@@ -11,15 +11,7 @@ So im new to Jekyll and so far I’m loving it, I already use it for two of my s
 
 <span style="font-style:italic;text-decoration:underline;font-weight:bold;">Underline</span>
 
-Google docs would
-
-		<span style="font-style:italic;">be perfect, t</span>
-
-		hey have a solid spell check and all the other stuff you want from a text editor and as an added bonuses e
-
-		<span style="font-weight:bold;">verything i</span>
-
-		s saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
+Google docs would<span style="font-style:italic;">be perfect, t</span>hey have a solid spell check and all the other stuff you want from a text editor and as an added bonuses e<span style="font-weight:bold;">verything i</span>s saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
 
 <h3 style="page-break-after:avoid;">
 
