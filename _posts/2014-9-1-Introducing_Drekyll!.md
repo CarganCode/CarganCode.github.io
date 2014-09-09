@@ -9,9 +9,17 @@ So im new to Jekyll and so far I’m loving it, I already use it for two of my s
 
 <!--more-->
 
-#st0
+<span style="font-style:italic;text-decoration:underline;font-weight:bold;">Underline</span>
 
-Google docs would be perfect, they have a solid spell check and all the other stuff you want from a text editor and as an added bonuses everything is saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
+Google docs would
+
+		<span style="font-style:italic;">be perfect, t</span>
+
+		hey have a solid spell check and all the other stuff you want from a text editor and as an added bonuses e
+
+		<span style="font-weight:bold;">verything i</span>
+
+		s saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
 
 <h3 style="page-break-after:avoid;">
 
@@ -19,9 +27,9 @@ Google docs would be perfect, they have a solid spell check and all the other st
 
 	</h3>
 
-Through the power of Google Apps Script and Github Api. Posting a formatted google doc to a Jekyll powered site can be done from the push of a button. Google automagicly adds all the needed Html Tags if you don't like markdown. but you can still have the power of markdown through the use of some magic regex’s.
+<span style="font-style:italic;">Through the power of Google Apps Script and Github Api. Posting a formatted google doc to a Jekyll powered site can be done from the push of a button. Google automagicly adds all the needed Html Tags if you don't like markdown. but you can still have the power of markdown through the use of some magic regex’s.</span>
 
-eg, Here is some inline code:
+<span style="font-style:italic;">eg, Here is some inline code:</span>
 
 {% highlight javascript linnos %}
 //We can have block code
