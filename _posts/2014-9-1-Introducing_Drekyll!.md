@@ -37,5 +37,6 @@ function test(var someting){
 
 But I admit its not perfect, to use the syntax highlighter you need to wrap it in a `&lt;code&gt;&lt;/code&gt;` tag.
 
-!@#$%^&amp;*()_+{}|:”&lt;&gt;?/.,’;\][
-Teext with one \n
+!@#$%^&amp;*()_+{}|:”&lt;&gt;?/.,’;\][  
+text with only one thing
+
