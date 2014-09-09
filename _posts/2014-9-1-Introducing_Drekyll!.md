@@ -9,7 +9,7 @@ So im new to Jekyll and so far I’m loving it, I already use it for two of my s
 
 <!--more-->
 
-<span style="font-style:italic;text-decoration:underline;font-weight:bold;">Underline
+#st0
 
 Google docs would be perfect, they have a solid spell check and all the other stuff you want from a text editor and as an added bonuses everything is saved in the cloud. Now I know what you're thinking. “Thats great Tim but how are you going to get the docs into a post?” But that’s the best part!
 
@@ -36,4 +36,6 @@ function test(var someting){
 {% endhighlight %}
 
 But I admit its not perfect, to use the syntax highlighter you need to wrap it in a `&lt;code&gt;&lt;/code&gt;` tag.
+
+!@#$%^&amp;*()_+{}|:”&lt;&gt;?/.,’;\][
 
