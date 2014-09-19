@@ -10,15 +10,19 @@ type: blog
 
 As many of you know (since I have one reader its everyone), I have been maintaining autoCrat on behalf of New Visions for the last year or so. Sadly I am announcing that its time to step down. It has been a fantastic experience and I have learned a ton working with the Cloud Lab team.
 
-<span style="background-color:#ffffff;">>I wanted to announce that I will be taking over for</span><span style="background-color:#ffffff;">+
+>I wanted to announce that I will be taking over for
 
-		<span style="background-color:#ffffff;;font-weight:bold;">
+		+
+
+		<span style="font-weight:bold;">
 
 			<a href="https://plus.google.com/102483238150430168726" style="color:inherit;text-decoration:inherit;">Tim Cargan</a>
 
-		<span style="background-color:#ffffff;">as lead developer on autoCrat. Tim has done an incredible job transitioning autoCrat from the old script framework into the new add-ons framework and has taught the Cloudlab team a lot along the way.</span>
+		
 
-<span style="background-color:#ffffff;">>But alas, he needs to focus on applying to colleges and finishing high school (that's right, he is a high school senior). Tim has been gracious enough to offer continued support, albeit in a much reduced capacity.
+		as lead developer on autoCrat. Tim has done an incredible job transitioning autoCrat from the old script framework into the new add-ons framework and has taught the Cloudlab team a lot along the way.
+
+>But alas, he needs to focus on applying to colleges and finishing high school (that's right, he is a high school senior). Tim has been gracious enough to offer continued support, albeit in a much reduced capacity.
 
 <span style="background-color:#ffffff;" />
 
