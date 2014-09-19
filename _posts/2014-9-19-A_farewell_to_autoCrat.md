@@ -12,13 +12,7 @@ As many of you know (since I have one reader its everyone), I have been maintain
 
 >I wanted to announce that I will be taking over for
 
-		+
-
-		<span style="font-weight:bold;">
-
-			<a href="https://plus.google.com/102483238150430168726" style="color:inherit;text-decoration:inherit;">Tim Cargan</a>
-
-		
+		Tim Cargan
 
 		as lead developer on autoCrat. Tim has done an incredible job transitioning autoCrat from the old script framework into the new add-ons framework and has taught the Cloudlab team a lot along the way.
 
