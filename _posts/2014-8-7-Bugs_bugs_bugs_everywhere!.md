@@ -4,7 +4,7 @@ title: Bugs bugs bugs everywhere!
 date: 2014-08-07T14:13:42.000Z
 tags: autoCrat, Code, Bugs
 categories: autoCrat
-type: code
+type: blog
 ---
 
 As you may or may not know, I wright/ maintain the somewhat popular Google Drive add-on autoCrat. We just passed 13,000 users however more importantly, about 2 weeks about I published my biggest update to date. It has a new sleeker look and feel, new functionality and (in theory) is faster at merging docs. The trouble is for the last two weeks autoCrat has been plagued with bugs I've never seen in testing.   
