@@ -2,7 +2,7 @@
 layout: post
 title: A farewell to autoCrat
 date: 2014-09-19T17:34:53.690Z
-tags: autoCrat, code, goodbye
+tags: autoCrat, Code, Goodbye
 categories: autoCrat
 type: blog
 ---
@@ -20,7 +20,7 @@ I think Jared has put it perfectly, I don’t have the time needed to work on a 
 
 <span style="color:#404040;font-size:10pt;" />
 
-<span style="color:#404040;font-size:10pt;;background-color:#ffffff;" />
+<span style="color:#404040;font-size:10pt;background-color:#ffffff;" />
 
-<span style="color:#404040;font-size:10pt;;background-color:#ffffff;" />
+<span style="color:#404040;font-size:10pt;background-color:#ffffff;" />
 
