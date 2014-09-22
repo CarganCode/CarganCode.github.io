@@ -2,8 +2,8 @@
 layout: post
 title: A farewell to autoCrat
 date: 2014-09-19T17:34:53.690Z
-tags: autoCrat, Code, Goodbye
-categories: autoCrat
+tags: 
+categories: 
 type: blog
 ---
 
