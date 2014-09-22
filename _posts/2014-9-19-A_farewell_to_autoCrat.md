@@ -18,9 +18,3 @@ As many of you know (since I have one reader its everyone), I have been maintain
 
 I think Jared has put it perfectly, I don’t have the time needed to work on a full scale app and do everything else I need to get done. I will still be working on autoCrat in a reduced capacity for the foreseeable future and I have some other exciting projects in the work but for now I will be stepping back.
 
-<span style="color:#404040;font-size:10pt;" />
-
-<span style="color:#404040;font-size:10pt;background-color:#ffffff;" />
-
-<span style="color:#404040;font-size:10pt;background-color:#ffffff;" />
-
