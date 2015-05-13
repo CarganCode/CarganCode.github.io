@@ -1,12 +1,40 @@
 .post{
+	padding: 30px;
+	background: white;
+	border-radius: 1px;
+	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+
 	.post-header{
-		margin-bottom: 40px;
+		
 		
 		h1{
-			margin-bottom: 0;
+			margin: 0;
 		}
 		.meta{
 			color: $accent-color;
 		}
+	}
+
+	hr {
+      margin: 30px auto 30px auto;
+      width: 90%
+    }
+}
+
+.site-header {
+	height: 150px;
+
+	#site-title{
+		margin: 0;
+		margin-top: 10px
+	}
+	.logo {
+		display: none;
+	}
+	#tag-line {
+		margin: 10px;
+	}
+	#nav {
+		top: -120px
 	}
 }

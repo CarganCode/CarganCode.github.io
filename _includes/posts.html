@@ -2,24 +2,12 @@
   <ul class="posts">
     {% for post in include.posts %}
       <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <div class="type"> 
-            {% if post.type == "code" %}
-               {% include icons/teletype.svg %} 
-            {% elsif post.type == "photo" %}
-              {% include icons/camra.svg %} 
-            {% else if post.type == "blog" %}
-              {% include icons/pencil_circle.svg %}
-            
-            {% endif %}
-          </div>
-       
-          <h2>{{ post.title }}</h2>
-        </a>
-        
+        <div class="card">
           <div class="post-meta">
             <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+            {% if post.categories %}
             -
+            {% endif %}
             {% for categorie in post.categories %}
               <span class="post-categorie">{{categorie}} 
                 {% if categorie != post.categories.last %}
@@ -28,12 +16,29 @@
               </span>
             {% endfor %}
           </div>
-        
-        
-        <br>
-        <span class"post-exert"> {{ post.excerpt | markdown }} </span>
-        <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
-    
+
+
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <div class="type"> 
+              {% if post.type == "code" %}
+                 {% include icons/teletype.svg %} 
+              {% elsif post.type == "photo" %}
+                {% include icons/camra.svg %} 
+              {% else if post.type == "blog" %}
+                {% include icons/pencil_circle.svg %}
+              
+              {% endif %}
+            </div>
+         
+            <h2>{{ post.title }}</h2>
+          </a>
+          
+
+          <hr>
+          <div class"post-exert"> {{ post.excerpt | markdown }} </div>
+          <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
+
+        </div>
       </li>
       <hr>
     {% endfor %}
