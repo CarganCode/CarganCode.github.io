@@ -2,6 +2,8 @@
 
 .site-footer {
   padding: 30px 0;
+  background-color: rgba(0,0,0,0.05);
+  
   
   .wrap {
   	display: table;
@@ -26,7 +28,7 @@
 .site-footer p {
   font-size: 15px;
   letter-spacing: -.3px;
-  color: $accent-color;
+  color: $footer-color;
 }
 
 .github-icon-svg,
