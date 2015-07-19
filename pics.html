@@ -64,7 +64,7 @@
           for (var i=max;  i < pics[date].length ; i++){
             var img_name = pics[date][i].img_name
             var media_link = pics[date][i].media_link
-            var nImg = '<div class="card" style="display: inline-flex;"><img src="http://cargan-code.appspot.com/pic/%%id%%"> <a href="%%mid%%" target="_blank" download="%%mlink%%" class="dlink"> <i class="fa fa-cloud-download"></i></a></div>'.replace(/%%id%%/g, img_name).replace("%%mlink%%", media_link)
+            var nImg = '<div class="card" style="display: inline-flex;"><img src="http://cargan-code.appspot.com/pic/%%id%%"> <a href="%%mlink%%" download="%%id%%" class="dlink"> <i class="fa fa-cloud-download"></i></a></div>'.replace(/%%id%%/g, img_name).replace("%%mlink%%", media_link)
             $(nImg).appendTo('#' + date)
             
           }
