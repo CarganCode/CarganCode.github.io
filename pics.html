@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Pics </title>
+    <meta charset='utf-8' />
+    <link rel="stylesheet" type="text/css" href="http://cdn.cargancode.io/main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <style>
+      .card {
+        padding: 0;
+        margin: 5px;
+      }
+      a h3{ color: #282822; cursor: hand}
+      .dlink{
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        left: -40px;
+        color: rgba(255, 255, 255, 0.5);
+        position: relative;
+        display: block;
+        width: 0;
+        font-size: 30px;
+      }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+
+    var pics ={}
+    function build(data){
+        for (r in data){
+          var fileName = data[r].name.split("/").pop()
+          d = new Date(parseInt(data[r].ctime) * 1000)
+          date = d.getFullYear() + "-" + d.getMonth() + "-" + d.getDate()
+          console.log(date)
+          img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName}
+          pics[date] ? pics[date].push(img) : pics[date] = [img]
+        }
+        for (date in pics){
+          var ddiv = "<div id='%%date%%'></div>".replace("%%date%%", date)
+          $(ddiv).appendTo('body')
+          var hd = "<a onclick=more('" + date + "')><h3>" + date + "<span class=big> - " + pics[date].length + " Pics</span></h3></a>"
+          $(hd).appendTo('#' + date)
+
+          var max = 8 < pics[date].length ? 8: pics[date].length
+          for (var i=0;  i < max ; i++){
+            
+            var img_name = pics[date][i].img_name
+            var media_link = pics[date][i].media_link
+            var nImg = '<div class="card" style="display: inline-flex;"><img src="http://cargan-code.appspot.com/pic/%%id%%"> <a href="%%mlink%%" target="_blank" class="dlink"> <i class="fa fa-cloud-download"></i></a></div>'.replace("%%id%%", img_name).replace("%%mlink%%", media_link)
+            $(nImg).appendTo('#' + date)
+            
+          }
+        }
+    }
+    function more(date) {
+      var max = 8 < pics[date].length ? 8: pics[date].length
+          for (var i=max;  i < pics[date].length ; i++){
+            
+            var img_name = pics[date][i].img_name
+            var nImg = '<div class="card" style="display: inline-flex;"><img src="http://cargan-code.appspot.com/pic/%%id%%"></div>'.replace("%%id%%", img_name)
+            $(nImg).appendTo('#' + date)
+            
+          }
+    }
+
+    $(window)
+      .bind('load', function() {
+        console.log ("making ajax")
+        $.ajax({
+          url: "http://cargan-code.appspot.com/new",  
+          }).done(function(data) {
+            console.log ("ajr")
+            console.log(data);
+            build(data)
+            console.log ("ajr")
+          });
+    });
+    </script>
+
+  </head>
+  <body>
+    <h1> Pics </h1>
+  </body>
+</html>
