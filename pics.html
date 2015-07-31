@@ -81,7 +81,7 @@ description: It takes a while for it to load. To see all pics from a day just cl
             for (r in data){
               var fileName = data[r].filename.split("/").pop()
               var surl = data[r].surl
-              var o = data[r].orientation
+              var o = data[r].metadata.Orientation
               d = new Date(parseInt(data[r].ctime) * 1000)
               date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
               img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o}
