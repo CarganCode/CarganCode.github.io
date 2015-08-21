@@ -5,7 +5,10 @@ description: It takes a while for it to load. To see all pics from a day just cl
 ---
 
     <style>
-
+    #c svg{
+      height: 100px;
+      width: 100px;
+    }
       .pic {
         padding: 0;
         margin: 5px;
@@ -82,12 +85,23 @@ description: It takes a while for it to load. To see all pics from a day just cl
         function build(data){
 
             for (r in data){
-              var fileName = data[r].filename.split("/").pop()
-
+              try{
+                var fileName = data[r].filename.split("/").pop()
+              }catch(e){
+                var fileName = data[r].filename
+              }
               var surl = data[r].surl
               var o = data[r].metadata.Orientation
               var metadata = data[r].metadata
-              d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
+
+              //console.log(data[r].metadata.DateCreated)
+
+              if (data[r].metadata.DateCreated){
+                var d = new Date(data[r].metadata.DateCreated) 
+              }else{
+                var d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
+              }
+
               date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
 
               img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o, "metadata" : metadata}
@@ -121,16 +135,20 @@ description: It takes a while for it to load. To see all pics from a day just cl
           if (!pics[date].expand) {
             var max = 5 < pics[date].length ? 5: pics[date].length
             imgs = ""
-            for (var index = 0;  index < pics[date].length ; index ++){
-              s = Math.floor((pics[date].length / max) * Math.floor(index / max))
-              if( index == s){
+
+        
+
+            for (var index = 1;  index < pics[date].length ; index ++){
+              s = Math.floor((pics[date].length / max) * Math.floor((max  / pics[date].length) * index + 1))
+              console.log(s)
+              if(index == s ){
                  console.log("s" + index)
                 continue
               }
               var after = index - 1 >= 0 ?  index -1 : 0
               var afters = date + '-' + after
 
-              addm(date, index, afters)
+              add(date, index, afters)
               
             }
             pics[date].expand = true
@@ -140,8 +158,8 @@ description: It takes a while for it to load. To see all pics from a day just cl
               selector: '.pic',
               animate: true,
               
-              cellH: 100,
-              cellW: 150,
+              cellH: 120,
+              cellW: 180,
 
               gutterX: 10,
               gutterY: 10,
@@ -151,9 +169,6 @@ description: It takes a while for it to load. To see all pics from a day just cl
               }
             });
 
-            nImg = "<div class='pic date' style='width:70%'> <h1> Date </h1> </div>"
-            $(nImg).appendTo('#' + date)
-
             $(window).trigger("resize");
             wall.fitWidth();
             
@@ -161,35 +176,46 @@ description: It takes a while for it to load. To see all pics from a day just cl
          
         }
 
-        var dist = [1,2,2,3,3,3,3,3,3,4,4,4,4,5]
-         function addm(date, index, after){
+        var dist = [2,2,3,3,3,3,3,3,4,4,4,4,5]
+
+        function add(date, index, after){
           var img_url = pics[date][index].surl
           var img_name = pics[date][index].img_name
           var media_link = pics[date][index].media_link
-
+          var img_orientation = pics[date][index].metadata['Orientation']
+          img_orientation = img_orientation ? img_orientation : 1
           var img_width = pics[date][index].metadata['ImageWidth']
           var img_height = pics[date][index].metadata['ImageLength']
           var img_rating = pics[date][index].metadata['Rating']
           img_rating = img_rating ? img_rating : dist[Math.floor(Math.random() * dist.length)]
-          var aspect = img_height/img_width
-          var scale = 100 * img_rating
 
-          if (aspect < 1){
+          var aspect = img_height/img_width
+          var scale = (Math.pow(2, img_rating)) * 15
+          
+
+          if (aspect < 1 && img_orientation == 1){
             //h is known so to maintain the aspect:
             //h/w == aspect
             //w == h/aspect
             var h = scale
             var w =  h/aspect
-          }else{
+          }else if(img_orientation == 1){
             //w is known so to maintain the aspect:
             //h/w == aspect
             //h == w * aspect
             var w = scale
             var h = w * aspect
+          }else{
+            var w = scale
+            var h = w * (1/aspect)
           }
-          
 
-          console.log("rateing: " + img_rating  + " height: " + h + " width: " + w)
+          h = Math.round(h)
+          w = Math.round(w)
+          var le = h > w ? h : w // Long edge 
+          img_url += "=s" + le //So it loads the right size image 
+
+          //console.log("scale: " + scale+ " rateing: " + img_rating  + " height: " + h + " width: " + w + " Orientation: "+ img_orientation)
           var nImg = tImg.replace(/%%id%%/g, img_url).replace("%%mlink%%", media_link).replace(/%%name%%/g, img_name).replace(/%%date%%/g, date).replace(/%%index%%/g, index).replace(/%%ref%%/g, date+'-'+index).replace(/%%width%%/g, w).replace(/%%height%%/g, h)
 
           if(after){
@@ -198,26 +224,6 @@ description: It takes a while for it to load. To see all pics from a day just cl
             $(nImg).appendTo('#' + date).load()
           }
         }
-
-        function add(date, index){
-          var img_url = pics[date][index].surl
-          var img_name = pics[date][index].img_name
-          var media_link = pics[date][index].media_link
-
-          var w = 300 +  200 * Math.random() << 0;
-          var w = pics[date][index].o == 1 ? w : 341
-
-          //512 / 341 == w/ h : (512/341)h = w : h = w /(512/341)
-          var h = pics[date][index].o == 1 ? (w /(512/341)) : 512
-
-          //Untill pre expanded albums are freewalled use standard sizes
-          w = 512
-          h = 341
-
-          var nImg = tImg.replace(/%%id%%/g, img_url).replace("%%mlink%%", media_link).replace(/%%name%%/g, img_name).replace(/%%date%%/g, date).replace(/%%index%%/g, index).replace(/%%ref%%/g, date+'-'+index).replace(/%%width%%/g, w).replace(/%%height%%/g, h)
-          $(nImg).appendTo('#' + date)
-        }
-
         function twindow(){
           console.log(event)
           console.log("t")

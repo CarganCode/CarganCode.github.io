@@ -67,6 +67,11 @@ description: It takes a while for it to load. To see all pics from a day just cl
 
       }
 
+      img{
+        min-height: 300px;
+        max-height: 300px;
+      }
+
     </style>
 
   <body>
@@ -82,14 +87,21 @@ description: It takes a while for it to load. To see all pics from a day just cl
         function build(data){
 
             for (r in data){
-              var fileName = data[r].filename.split("/").pop()
+              var fileName = "t" //data[r].filename.split("/").pop()
 
               var surl = data[r].surl
               var o = data[r].metadata.Orientation
               var metadata = data[r].metadata
-              //d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
-              //date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
-              date = "all"
+              
+              if (data[r].metadata.DateCreated){
+                var d = new Date(data[r].metadata.DateCreated) 
+              }else{
+                continue
+                //var d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
+              }
+
+              date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
+              //date = "all"
               img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o, "metadata" : metadata}
 
               pics[date] ? pics[date].push(img) : pics[date] = [img]
@@ -107,25 +119,30 @@ description: It takes a while for it to load. To see all pics from a day just cl
             $(ddiv).appendTo('.post-content')
 
             for (date in pics){
-              //var hd = "<div class='pic date' style='width:100%'><a onclick=more('" + date + "')><h3>" + date + "<span class=big> - " + pics[date].length + " Pics</span></h3></a></div>"
-              var hd = "<div class='pic date' style='width:100%'><h1>"+ date+"</h1></div>"
-              $(hd).appendTo('#infi')
+              
+              var dateTitle = "<div class='pic date' style='width:100%; height:60px;'><h1>"+ date+"</h1></div>"
+              $(dateTitle).appendTo('#infi')
+              
+              for (var i=0;  i < pics[date].length ; i++){
+                index = i 
+                add(date, index)
 
-              //var max = 15 < pics[date].length ? 15: pics[date].length
-              var max = pics[date].length
-              for (var i=0;  i < max ; i++){
-                var picnum = Math.floor((pics[date].length / max) * i)
-                add(date, picnum)
-                
+                if(i == Math.floor(pics[date].length / 2)){
+
+                }
               }
             }
-            var wall = new freewall('#infi');
-              wall.reset({
-              //selector: '.pic',
+            initFreeWall("#infi")
+          }
+
+          function initFreeWall(id){
+            var wall = new freewall(id);
+            wall.reset({
+              selector: '.pic',
               animate: true,
               
-              cellH: 100,
-              cellW: 150,
+              cellH: 120,
+              cellW: 180,
 
               gutterX: 10,
               gutterY: 10,
@@ -135,17 +152,13 @@ description: It takes a while for it to load. To see all pics from a day just cl
               }
             });
 
-            //nImg = "<div class='pic date' style='width:100%'> <h1> Date </h1> </div>"
-            //$(nImg).appendTo('#' + date)
-
             $(window).trigger("resize");
             wall.fitWidth();
-
-        }
-
+          }
 
         var dist = [3,3,3,3,3,3,4,4,4,4,5]
-         function add(date, index, after){
+        var MIN_RATE = 4
+        function add(date, index, after){
           var img_url = pics[date][index].surl
           var img_name = pics[date][index].img_name
           var media_link = pics[date][index].media_link
@@ -155,8 +168,14 @@ description: It takes a while for it to load. To see all pics from a day just cl
           var img_height = pics[date][index].metadata['ImageLength']
           var img_rating = pics[date][index].metadata['Rating']
           img_rating = img_rating ? img_rating : dist[Math.floor(Math.random() * dist.length)]
+
+          magic = Math.round(MIN_RATE - (Math.random() - 0.2))
+          if(img_rating < magic)
+            return
+
           var aspect = img_height/img_width
-          var scale = 100 * img_rating
+          var scale = (Math.pow(2, img_rating)) * 15
+          
 
           if (aspect < 1 && img_orientation == 1){
             //h is known so to maintain the aspect:
@@ -174,9 +193,13 @@ description: It takes a while for it to load. To see all pics from a day just cl
             var w = scale
             var h = w * (1/aspect)
           }
-          
 
-          console.log("rateing: " + img_rating  + " height: " + h + " width: " + w + " Orientation: "+ img_orientation)
+          h = Math.round(h)
+          w = Math.round(w)
+          var le = h > w ? h : w // Long edge 
+          img_url += "=s" + le //So it loads the right size image 
+
+          //console.log("scale: " + scale+ " rateing: " + img_rating  + " height: " + h + " width: " + w + " Orientation: "+ img_orientation)
           var nImg = tImg.replace(/%%id%%/g, img_url).replace("%%mlink%%", media_link).replace(/%%name%%/g, img_name).replace(/%%date%%/g, date).replace(/%%index%%/g, index).replace(/%%ref%%/g, date+'-'+index).replace(/%%width%%/g, w).replace(/%%height%%/g, h)
 
           if(after){
