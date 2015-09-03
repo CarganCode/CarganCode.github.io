@@ -1,0 +1,304 @@
+---
+layout: pics
+title: Pics
+description: Some pics and shit
+---
+
+    <style>
+
+      .pic {
+        padding: 0;
+        margin: 5px;
+        max-width: 100%;
+        display: inline-flex;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
+        background-repeat: no-repeat;
+        background-size: cover;
+        direction: rtl;
+      }
+  
+      .album_cont {
+        margin: 10px 0;
+      }
+
+      a h3{ color: #282822; cursor: pointer;}
+      .album_cont h3{
+        margin-top: 0;
+      }
+
+      .dlink{
+        text-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 30px;
+        text-align: right;
+        margin-right: 5px;
+        height: 30px;
+      }
+      h1{
+        margin: auto;
+      }
+      .window {
+        position: fixed;
+        top:0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #window img{
+        max-width: 100%;
+        margin: 5px;
+        box-shadow: 1px 2px 5px 2px rgba(0,0,0,0.25);
+      }
+      #window .dlink{
+        position: initial;
+        width: initial;
+        text-align: right;
+        margin: -15px 5px;
+      }
+      #window .arrow {
+        font-size: 50px;
+        margin: 0;
+      }
+      .date {
+        direction: ltr;
+
+      }
+
+      img{
+        min-height: 300px;
+        max-height: 300px;
+      }
+
+    </style>
+
+  <body>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript" src="/scripts/freewall/freewall.js"></script>
+     <script type="text/javascript">
+        var pics ={}
+        
+        var tImg = '<div class="pic" id="%%ref%%" style=" width:%%width%%px; height: %%height%%px; background-image:url(%%id%%)" onclick=swindow(\"%%date%%\",%%index%%)> <a href="%%mlink%%" download="%%name%%" class="dlink" > <i class="fa fa-cloud-download"></i></a></div>'
+
+
+        function build(data){
+
+            for (r in data){
+              var fileName = "t" //data[r].filename.split("/").pop()
+
+              var surl = data[r].surl
+              var o = data[r].metadata.Orientation
+              var metadata = data[r].metadata
+              
+              if (data[r].metadata.DateCreated){
+                var d = new Date(data[r].metadata.DateCreated) 
+              }else{
+                continue
+                //var d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
+              }
+
+              date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
+              //date = "all"
+              img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o, "metadata" : metadata}
+
+              pics[date] ? pics[date].push(img) : pics[date] = [img]
+            }
+
+            var w = '<div class="window" id="window" onclick=twindow() style="display: none">' +
+            '<i id="previous" class="dlink arrow fa fa-angle-left"></i><div><img>' +
+            '<br>' +
+            '<a href="%%mlink%%" download="%%name%%" class="dlink"><i class="fa fa-cloud-download"></i>Download</a></div>' +
+            '<i id="next" class="dlink arrow fa fa-angle-right"></i></div>'
+
+            $(w).appendTo('body')
+
+            var ddiv = "<div class='card album_cont' id='infi'></div>"
+            $(ddiv).appendTo('.post-content')
+
+            for (date in pics){
+              
+              //var dateTitle = "<div class='pic date' style='width:100%; height:60px;'><h1>"+ date+"</h1></div>"
+              //$(dateTitle).appendTo('#infi')
+              
+              for (var i=0;  i < pics[date].length ; i++){
+                index = i 
+                add(date, index)
+
+                if(i == Math.floor(pics[date].length / 2)){
+
+                }
+              }
+            }
+            initFreeWall("#infi")
+          }
+
+          function initFreeWall(id){
+            var wall = new freewall(id);
+            wall.reset({
+              selector: '.pic',
+              animate: true,
+              
+              cellH: 120,
+              cellW: 180,
+
+              gutterX: 10,
+              gutterY: 10,
+              fixSize: 0,
+              onResize: function() {
+                wall.fitWidth();
+              }
+            });
+
+            $(window).trigger("resize");
+            wall.fitWidth();
+          }
+
+        var dist = [3,3,3,3,3,3,4,4,4,4,5]
+        var MIN_RATE = 4
+        function add(date, index, after){
+          var img_url = pics[date][index].surl
+          var img_name = pics[date][index].img_name
+          var media_link = pics[date][index].media_link
+          var img_orientation = pics[date][index].metadata['Orientation']
+          img_orientation = img_orientation ? img_orientation : 1
+          var img_width = pics[date][index].metadata['ImageWidth']
+          var img_height = pics[date][index].metadata['ImageLength']
+          var img_rating = pics[date][index].metadata['Rating']
+          img_rating = img_rating ? img_rating : dist[Math.floor(Math.random() * dist.length)]
+
+          magic = Math.round(MIN_RATE - (Math.random() - 0.2))
+          if(img_rating < magic)
+            return
+
+          var aspect = img_height/img_width
+          var scale = (Math.pow(2, img_rating)) * 15
+          
+
+          if (aspect < 1 && img_orientation == 1){
+            //h is known so to maintain the aspect:
+            //h/w == aspect
+            //w == h/aspect
+            var h = scale
+            var w =  h/aspect
+          }else if(img_orientation == 1){
+            //w is known so to maintain the aspect:
+            //h/w == aspect
+            //h == w * aspect
+            var w = scale
+            var h = w * aspect
+          }else{
+            var w = scale
+            var h = w * (1/aspect)
+          }
+
+          h = Math.round(h)
+          w = Math.round(w)
+          var le = h > w ? h : w // Long edge 
+          img_url += "=s" + le //So it loads the right size image 
+
+          //console.log("scale: " + scale+ " rateing: " + img_rating  + " height: " + h + " width: " + w + " Orientation: "+ img_orientation)
+          var nImg = tImg.replace(/%%id%%/g, img_url).replace("%%mlink%%", media_link).replace(/%%name%%/g, img_name).replace(/%%date%%/g, date).replace(/%%index%%/g, index).replace(/%%ref%%/g, date+'-'+index).replace(/%%width%%/g, w).replace(/%%height%%/g, h)
+
+          if(after){
+            $('#' + after).after(nImg)
+          }else{
+            $(nImg).appendTo('#infi')
+          }
+        }
+
+        
+        function twindow(){
+          console.log(event)
+          console.log("t")
+          enableScroll()
+          $("#window").toggle()
+        }
+
+        function swindow(date, index, isNext) {
+          console.log("s")
+          event.stopPropagation()
+          event.stopImmediatePropagation()
+
+          var img_url = pics[date][index].surl
+          var media_link = pics[date][index].media_link
+          var img_name = pics[date][index].img_name
+
+          var max_height = window.innerHeight - 100;
+
+          img_url += "=s1600"
+          var img = $('<img>')
+
+          next = pics[date].length != (index + 1)? (index + 1): 0;
+          previous = 0 <= (index - 1)? (index - 1): pics[date].length - 1;
+          ocn= 'swindow(\"%%date%%\",%%index%%, true)'.replace(/%%date%%/g, date).replace(/%%index%%/g, next)
+          ocp= 'swindow(\"%%date%%\",%%index%%, true)'.replace(/%%date%%/g, date).replace(/%%index%%/g, previous)
+
+          img.attr('onclick', ocn)
+          img.attr('src', img_url);
+          img.css({'max-height': max_height + 'px'})
+
+          $('#window a').attr('href', media_link).attr('download', img_name).attr('onclick', "event.stopPropagation()")
+          $("#window img").replaceWith(img)
+
+          $("#next").attr('onclick', ocn)
+          $("#previous").attr('onclick', ocp)
+
+          if(!isNext){
+            disableScroll()
+            $("#window").toggle()
+          }else{
+            
+          }
+          
+        }
+
+
+        // left: 37, up: 38, right: 39, down: 40,
+        // spacebar: 32, pageup: 33, pagedown: 34, end: 35, home: 36
+        var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+        function preventDefault(e) {
+          e = e || window.event;
+          if (e.preventDefault)
+              e.preventDefault();
+          e.returnValue = false;  
+        }
+
+        function preventDefaultForScrollKeys(e) {
+            if (keys[e.keyCode]) {
+                preventDefault(e);
+                return false;
+            }
+        }
+
+        function disableScroll() {
+          if (window.addEventListener) // older FF
+              window.addEventListener('DOMMouseScroll', preventDefault, false);
+          window.onwheel = preventDefault; // modern standard
+          window.onmousewheel = document.onmousewheel = preventDefault; // older browsers, IE
+          window.ontouchmove  = preventDefault; // mobile
+          document.onkeydown  = preventDefaultForScrollKeys;
+        }
+
+        function enableScroll() {
+            if (window.removeEventListener)
+                window.removeEventListener('DOMMouseScroll', preventDefault, false);
+            window.onmousewheel = document.onmousewheel = null; 
+            window.onwheel = null; 
+            window.ontouchmove = null;  
+            document.onkeydown = null;  
+        }
+                $(window)
+                  .bind('load', function() {
+                    $.ajax({
+                      url: "http://cargan-code.appspot.com/sv",  
+                      }).done(function(data) {
+                        build(data) 
+                      });
+                });
+    </script>
+
+  </body>
