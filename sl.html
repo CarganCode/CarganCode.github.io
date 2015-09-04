@@ -87,7 +87,9 @@ description: Some pics and shit
         function build(data){
 
             for (r in data){
-              var fileName = "t" //data[r].filename.split("/").pop()
+              var fileName = data[r].title
+              var ml = data[r].gs_object_name
+              ml = ml ? ml.split("/").pop() : "NULL"
 
               var surl = data[r].surl
               var o = data[r].metadata.Orientation
@@ -102,7 +104,7 @@ description: Some pics and shit
 
               date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
               //date = "all"
-              img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o, "metadata" : metadata}
+              img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/" + ml, "surl": surl, "o": o, "metadata" : metadata}
 
               pics[date] ? pics[date].push(img) : pics[date] = [img]
             }
