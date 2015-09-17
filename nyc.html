@@ -1,7 +1,7 @@
 ---
 layout: pics
 title: Pics
-description: It takes a while for it to load. To see all pics from a day just click on the date
+description: Some pics and shit
 ---
 
     <style>
@@ -87,23 +87,24 @@ description: It takes a while for it to load. To see all pics from a day just cl
         function build(data){
 
             for (r in data){
-              var fileName = "t" //data[r].filename.split("/").pop()
+              var fileName = data[r].title
+              var ml = data[r].gs_object_name
+              ml = ml ? ml.split("/").pop() : "NULL"
 
               var surl = data[r].surl
               var o = data[r].metadata.Orientation
               var metadata = data[r].metadata
               
-              
               if (data[r].metadata.DateCreated){
                 var d = new Date(data[r].metadata.DateCreated) 
               }else{
-                //continue
-                var d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
+                continue
+                //var d = new Date(parseInt(data[r].metadata.DateTimeOriginal) * 1000)
               }
 
               date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate()
               //date = "all"
-              img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/jpg/" + fileName, "surl": surl, "o": o, "metadata" : metadata}
+              img = {"img_name": fileName, "media_link": "http://cdn.cargancode.io/" + ml, "surl": surl, "o": o, "metadata" : metadata}
 
               pics[date] ? pics[date].push(img) : pics[date] = [img]
             }
@@ -121,8 +122,8 @@ description: It takes a while for it to load. To see all pics from a day just cl
 
             for (date in pics){
               
-              var dateTitle = "<div class='pic date' style='width:100%; height:60px;'><h1>"+ date+"</h1></div>"
-              $(dateTitle).appendTo('#infi')
+              //var dateTitle = "<div class='pic date' style='width:100%; height:60px;'><h1>"+ date+"</h1></div>"
+              //$(dateTitle).appendTo('#infi')
               
               for (var i=0;  i < pics[date].length ; i++){
                 index = i 
@@ -295,7 +296,7 @@ description: It takes a while for it to load. To see all pics from a day just cl
                 $(window)
                   .bind('load', function() {
                     $.ajax({
-                      url: "http://cargan-code.appspot.com/new",  
+                      url: "http://cargan-code.appspot.com/filter/NYC",  
                       }).done(function(data) {
                         build(data) 
                       });
