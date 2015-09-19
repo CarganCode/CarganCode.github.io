@@ -1,7 +1,7 @@
 ---
 layout: pics
 title: Pics
-description: Some pics 
+description: Some pics and shit
 ---
 
     <style>
@@ -85,6 +85,7 @@ description: Some pics
 
 
         function build(data){
+
             for (r in data){
               var fileName = data[r].title
               var ml = data[r].gs_object_name
@@ -292,14 +293,13 @@ description: Some pics
             window.ontouchmove = null;  
             document.onkeydown = null;  
         }
+        $(window).bind('load', run(""));
 
-        $(window).bind('load', function() {
-            $.ajax({
-              url: "http://cargan-code.appspot.com/sv",  
-              }).done(function(data) {
-                build(data) 
-              });
-        });
+        function run(q){
+          $.ajax({
+            url: "http://cargan-code.appspot.com/filter/" + q,  
+            }).done(function(data) { build(data) });
+        }
     </script>
 
   </body>
