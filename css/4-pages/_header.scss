@@ -20,13 +20,12 @@
 		margin: 10px;
 	}
 	#nav {
-		float: left;
-		padding-left: 30px;
+		float: right;
+		padding-right: 20px;
 		position: relative;
-		top: -120px;
 		
 		.page-link {
-			padding-right: 10px;
+			padding-right: 20px;
 			color: #ecf0f1;
 		}
 	}
@@ -35,6 +34,41 @@
 		display: none;
 	}
 }
+
+.head-img{
+	background: url(/images/nyc.jpg) no-repeat center center fixed; 
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	width: 100%;
+  	height: 70%;
+
+  	.wrap {
+  		background: linear-gradient(rgba(232, 167, 19,0.4), rgba(232, 167, 19,0.5)); /* Standard syntax */ 
+  		height:100%;
+  		max-width: 100%;
+
+  	}
+  	.center-text-cn{
+  		height: 100%;
+  		width: 100%;
+  		display: flex;
+  		justify-content: center;
+  	}
+  	.center-text-in{
+  		align-self: center;
+  	}
+  	#site-title{
+		margin: 0;
+		font-size: 80px;
+	}
+	#nav {
+		top: -100%;
+		font-size: 27px;
+	}
+}
+
 
 @media only screen and (max-device-width: 390px)  {
 	.site-header #site-title {
