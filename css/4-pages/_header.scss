@@ -67,14 +67,15 @@
 	#nav {
 		top: -100%;
 		font-size: 27px;
+		    padding: 20px;
 	}
 	#masthead{
 		top: -100%;
     	position: relative;
-    	width: 130px;
+    	width: 100px;
     	float: left;
-    	fill: #ecf0f1;
-
+    	fill: rgba(236,240,241, 0.7);
+    	padding: 20px;
     	svg {
     		filter: drop-shadow( 50px 50px 50px #000 ); 
     	}	
