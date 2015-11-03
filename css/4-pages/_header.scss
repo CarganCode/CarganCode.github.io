@@ -39,7 +39,33 @@
 	50% { opacity:0 }
 	100% { opacity:1 }
 }
+@keyframes feature-text-anim {
+	0%{
+		opacity:0;
+		-webkit-transform:translate3d(0,10px,0);
+		-moz-transform:translate3d(0,10px,0);
+		-ms-transform:translate3d(0,10px,0);
+		-o-transform:translate3d(0,10px,0);
+		transform:translate3d(0,10px,0)
+		}
+	75%{
+		opacity:0;
+		-webkit-transform:translate3d(0,10px,0);
+		-moz-transform:translate3d(0,10px,0);
+		-ms-transform:translate3d(0,10px,0);
+		-o-transform:translate3d(0,10px,0);
+		transform:translate3d(0,10px,0)
+		}
+	100%{
+		opacity:1;
+		-webkit-transform:translate3d(0,0,0);
+		-moz-transform:translate3d(0,0,0);
+		-ms-transform:translate3d(0,0,0);
+		-o-transform:translate3d(0,0,0);
+		transform:translate3d(0,0,0)
+		}
 
+}
 .head-img{
 	
   	width: 100%;
@@ -47,7 +73,7 @@
   	text-shadow: none;
   	
   	.head-img-div {
-  		animation: feature-bg-anim 1.5s ease-in-out;
+  		animation: feature-bg-anim 1s ease-in-out;
   		height: 100%;
   		widht: 100%;
   	}
@@ -64,6 +90,7 @@
   		width: 100%;
   		display: flex;
   		justify-content: center;
+  		animation: feature-text-anim 1.7s ease-in-out;
   	}
   	.center-text-in{
   		align-self: center;
@@ -75,7 +102,8 @@
 	#nav {
 		top: -100%;
 		font-size: 27px;
-		    padding: 20px;
+		padding: 20px;
+		animation: feature-bg-anim 0.7s ease-in-out;
 	}
 	#masthead{
 		top: -100%;
@@ -86,7 +114,8 @@
     	padding: 20px;
     	svg {
     		filter: drop-shadow( 50px 50px 50px #000 ); 
-    	}	
+    	}
+    	animation: feature-bg-anim 0.7s ease-in-out;
     }
 
 }
