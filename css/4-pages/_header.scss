@@ -9,6 +9,7 @@
 		text-align:center;
 		margin: 0;
 		margin-top: 10px;
+		color: $titile-color;
 		a{
 		  color: $titile-color;
 		}
@@ -112,14 +113,20 @@
     	float: left;
     	fill: rgba(236,240,241, 0.7);
     	padding: 20px;
-    	svg {
-    		filter: drop-shadow( 50px 50px 50px #000 ); 
-    	}
+    	a{
+		  fill: rgba(236,240,241, 0.7);
+		}
+		a:hover {
+			fill: rgba(236,240,241, 1);
+		}
     	animation: feature-bg-anim 0.7s ease-in-out;
     }
 
 }
 
+.head-short {
+	height: 50%;
+}
 
 @media only screen and (max-device-width: 390px)  {
 	.site-header #site-title {

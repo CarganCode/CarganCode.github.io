@@ -3,7 +3,7 @@ layout: page
 title: About
 description: A little about me
 permalink: /about/
-head-img: '/images/duck.jpg'
+head-img: '/images/aloha.jpg'
 ---
 
 This page, as the tile suggests, is all about me.

@@ -1,11 +1,11 @@
-<header class="site-header head-img" >
+<header class="site-header head-img {% if page.head-short == true %} head-short {% endif %}">
 	<div class="head-img-div" style="background: url({% if page.head-img %}{{ page.head-img }}{% else %} /images/ny.jpg {% endif %}) no-repeat center center fixed; background-size: cover;">
 	</div>
 	<div class="wrap">
 		<div class="center-text-cn">
 			<div class="center-text-in">
-				<h1 id="site-title"><a href="{{ site.baseurl }}/">Cargan&shy;Code</a></h1>
-				<h3 id="tag-line">Sometime I do code... </h3>
+				<h1 id="site-title">{{ page.title }}</h1>
+				<h3 id="tag-line">{{ page.description }}</h3>
 			</div>
 		</div>
 		<nav id="nav">
@@ -14,7 +14,9 @@
 			<a class="page-link" href="/blog/">Blog</a>
 		</nav>
 		<div id="masthead">
+			<a href="{{ site.baseurl }}/">
 			{% include icons/masthead-01.svg %}
+			</a>
 		</div>	
 	</div>
 	
