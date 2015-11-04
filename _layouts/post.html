@@ -1,17 +1,25 @@
 ---
-layout: default
+layout: home
 ---
-<div class="wrap">
-<div class="post">
 
-  <header class="post-header">
-  	<p class="meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    <h1>{{ page.title }}</h1>
-  </header>
-  <hr>
-  <article class="post-content">
-  {{ content }}
-  </article>
+<div class="post post blog">
+<p class="meta normal">{% if page.author %}{{ page.author }} • {% endif %} {{ page.date | date: "%b %-d, %Y" }}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
 
-</div>
+	<div class="type"> 
+		{% if page.type == "code" %}
+	 		{% include icons/teletype.svg %} 
+		{% elsif page.type == "photo" %}
+			{% include icons/camra.svg %} 
+		{% else if page.type == "blog" %}
+			{% include icons/pencil_circle.svg %}
+		{% endif %}
+	</div>
+	<hr>
+	
+	<article class="post-content">
+		<div class="wrap">
+			{{ content }}
+		</div>
+	</article>
+
 </div>

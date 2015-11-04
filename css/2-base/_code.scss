@@ -18,7 +18,11 @@ code {
   padding-left: 0;
 }
 
-.highlight  { background: #ffffff; }
+.highlight  {  
+  text-align: left;   
+  width: 700px;
+  margin: 0 auto;
+  }
 .highlight .c { color: #a50; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold; color: purple; } /* Keyword */

@@ -1,6 +1,8 @@
 ---
 layout: post
 title: A farewell to autoCrat
+description: off to new and better things
+author: Timothy R. Cargan
 date: 2014-09-19T17:34:53.690Z
 tags: autoCrat, Goodbye, Code
 categories: autoCrat

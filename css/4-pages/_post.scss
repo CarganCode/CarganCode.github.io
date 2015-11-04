@@ -1,19 +1,9 @@
 .post{
 	padding: 30px;
-	background: white;
-	border-radius: 1px;
-	box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.1);
-
-	.post-header{
-		
-		
-		h1{
-			margin: 0;
-		}
 		.meta{
 			color: $accent-color;
+			margin: 0;
 		}
-	}
 
 	hr {
       margin: 30px auto 30px auto;
