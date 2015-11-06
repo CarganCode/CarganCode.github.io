@@ -11,9 +11,7 @@ head-img: '/images/ts.jpg'
 
 <br>
 
-The UNIS-UN website had been around since long before any of the teams current members. There were only about 3 people on the planet who could update the site without breaking something and unfortuanaly none of there were ever around when you needed them. 
-
-When building the new site it was important to have the correct balance of a techy backend so next years webmaster had things to play with, easy to update, and of corse lightwate and mobile frindly so our freiends from all over the world could get to the informaton they needed without using all of their 500mb hotel wifi data.
+Stuff Stuff Stuff
 
 ---
 
