@@ -1,7 +1,7 @@
 ---
 layout: pics
-title: Pics
-description: It takes a while for it to load. To see all pics from a day just click on the date
+title: Galery
+description: I like taking pics, here are some of the good ones
 ---
 
     <style>
@@ -85,7 +85,7 @@ description: It takes a while for it to load. To see all pics from a day just cl
 
 
         function build(data){
-
+          console.log(data)
             for (r in data){
               var fileName = "t" //data[r].filename.split("/").pop()
 
@@ -116,13 +116,10 @@ description: It takes a while for it to load. To see all pics from a day just cl
 
             $(w).appendTo('body')
 
-            var ddiv = "<div class='card album_cont' id='infi'></div>"
+            var ddiv = "<div class='album_cont' id='infi'></div>"
             $(ddiv).appendTo('.post-content')
 
             for (date in pics){
-              
-              var dateTitle = "<div class='pic date' style='width:100%; height:60px;'><h1>"+ date+"</h1></div>"
-              $(dateTitle).appendTo('#infi')
               
               for (var i=0;  i < pics[date].length ; i++){
                 index = i 
@@ -295,7 +292,7 @@ description: It takes a while for it to load. To see all pics from a day just cl
                 $(window)
                   .bind('load', function() {
                     $.ajax({
-                      url: "http://cargan-code.appspot.com/new",  
+                      url: "http://cargan-code.appspot.com/pics",  
                       }).done(function(data) {
                         build(data) 
                       });

@@ -1,29 +1,7 @@
-
-<!DOCTYPE html>
-<html>
-
-  {% include head.html %}
-
-    <body>
-
-    {% include header.html %}
-
-    <div class="page-content"> 
-      <div class="post">
-			<header class="post-header">
-				<h1>{{ page.title }} {% if page.description %} <span class="big" style="font-weight: normal;"> - {{ page.description }} </span>{% endif %}</h1>
-			</header>
-		</div>
-    <div id="c" class="types"> 
-    {% include icons/camra.svg %}
-    </div>
-			<article class="post-content">
-				{{ content }}
-			</article>
-    </div>
-
-    {% include footer.html %}
-
-    </body>
-</html>
-
+---
+layout: raw
+head-short: true
+---
+<div class="post-content"> 
+    {{ content }}
+</div>
