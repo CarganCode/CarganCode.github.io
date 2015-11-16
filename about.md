@@ -9,19 +9,19 @@ head-img: '/images/aloha.jpg'
 
 ##What makes me, me
 
-I know, such a deep question for one so young but none the less must be answered. I am a teenage coder, reader, learner, music listener, photographer, kinda web dev and sleeper.
+I am a Computer Science student @ the University of Nottingham, technically Computer Science with Artificial Intelligence but that’s a bit of a mouthful. I'm also an amateur photographer, you can check out some of my favorite shots on my [Gallery][gallery]. I enjoy building websites and working on cool projects.
+
 
 ---
 
 **_Thats cool but what have you done?_**<br>
-Well I made this site. I also maintain [autoCrat][autoCrat] a Google sheets add-on. I'm in the process of organizing [TeenTech NY][ttny] a global tech conference, for teens by teens (I also built that site). And you know go to school coz high schooler... duh.
 
-**_Ok, Ok, fine. But whats all this for?_**<br>
-Well this is going to be a blog/ tutorial/ portfolio/ who knows what else.
+Well I made this site. I also maintain [autoCrat][autoCrat] a Google sheets add-on. I'm in the process of organizing [TeenTech NY][ttny] a global tech conference, for teens by teens (I also built that site). 
 
 
 
 
 
 [autoCrat]: https://chrome.google.com/webstore/detail/autocrat/ppgnklghfnlijoafjjkpoakpjjpdkgdj?hl=en-US "Sheets add-on"
-[ttny]: http://teentechny.org "TeenTech NY"
+[ttny]: projects/teentech "TeenTech NY"
+[gallery]: /gallery "My photos"
