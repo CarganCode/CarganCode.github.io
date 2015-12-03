@@ -19,4 +19,5 @@ After looking into the data a bit more I came to the conclusion that I must all 
 
 >Referrer spam is a type of spam that some affiliates use to generate traffic to their affiliate links. They hope that you'll see their domain in your Google Analytics and go to it. It's really that simple.
 <span style="background-color:#ffffff;font-size:12pt;" />
+<span style="background-color:#ffffff;font-size:12pt;" />
 It looks like someone had set up a bot to spam sites with links to try and make money. I was hoping people actually read this :(
