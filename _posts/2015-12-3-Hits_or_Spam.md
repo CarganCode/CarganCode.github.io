@@ -2,7 +2,7 @@
 layout: post
 title: Hits or Spam
 date: 2015-12-03T19:40:55.169Z
-head-img: /images/worldmap.jpg
+head-img: ç
 categories: Website
 type: blog
 tags: 

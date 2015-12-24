@@ -10,4 +10,4 @@ head-img: '/images/duck.jpg'
 
 ####Technologys Used
 
-#####Github/Jekyll, Sass, Vector grahpics
+#####Github, Python, Text processing
