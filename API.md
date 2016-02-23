@@ -24,10 +24,10 @@ This part of the API is just for dealing with users. Standard JSON user object t
 
 The current auth flow is cookie bassed, however Once the auth middleware is develped in additon to cookies, tokens can and will be used. Once that is in place a better auth flow will be set up. However some things will like remain the same
 
-	*Session state will persist accross the token e.g
-		Any API limits will apply to the token
+* Session state will persist accross the token e.g
+  Any API limits will apply to the token
 
-	*Rate limmits will exist be applied to the user and are token agnostic. This is in additon to standard IP rate limmiting etc.
+* Rate limmits will exist be applied to the user and are token agnostic. This is in additon to standard IP rate limmiting etc.
 
 <hr>
 
