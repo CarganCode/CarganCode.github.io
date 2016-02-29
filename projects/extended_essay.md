@@ -8,6 +8,6 @@ head-img: '/images/duck.jpg'
 
 ---
 
-####Technologys Used
+#### Technologys Used
 
-#####Github, Python, Text processing
+##### Github, Python, Text processing

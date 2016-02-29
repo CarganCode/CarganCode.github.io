@@ -8,9 +8,7 @@ twitter_username: timcargan
 github_username:  timcargan
 
 # Build settings
-markdown: kramdown
 permalink: pretty
-pygments: true
 
 paginate: 10
 paginate_path: "blog/page:num"

@@ -5,7 +5,7 @@ description: A website for a better world
 head-img: '/images/un.jpg'
 ---
 
-##UNIS-UN
+## UNIS-UN
 
 <video  style="max-width: 800px; width:100%;" controls poster="/images/nyc.jpg">
   	<source src="https://storage.googleapis.com/cdn.cargancode.io/UNIS%20UN%20Welcome.mp4" type="video/mp4">
@@ -20,6 +20,6 @@ When building the new site it was important to have the correct balance of a tec
 
 ---
 
-####Technologys Used
+#### Technologys Used
 
-#####Github/Jekyll, Sass, Vector grahpics
+##### Github/Jekyll, Sass, Vector grahpics

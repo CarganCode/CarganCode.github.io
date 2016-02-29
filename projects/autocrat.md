@@ -5,7 +5,7 @@ description: yes, the first 'a' is supposed to be lower case
 head-img: '/images/ts.jpg'
 ---
 
-##autoCrat
+## autoCrat
 
 autoCrat is a Google Sheets Add-on used by over 80,000 people worldwide as a document merge utility for Google Drive. Originally build by Andrew Stillman, as a Sheets Script, for New Visions for public schools. The Add-on version was completely rebuilt from the ground by me in the spring of 2014. I worked as part of the pre-release group of developers to be one of the first add-ons available in the store. 
 
@@ -19,6 +19,6 @@ Some of the issues that had to be dealt with:
 
 ---
 
-####Technologys Uses:
+#### Technologys Uses:
 
-#####Google Apps Script, Java Script, HTML + CSS
+##### Google Apps Script, Java Script, HTML + CSS

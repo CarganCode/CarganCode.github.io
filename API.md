@@ -5,7 +5,7 @@ description: A little about the api
 head-short: true
 ---
 
-#Users
+# Users
 This part of the API is just for dealing with users. Standard JSON user object that will be returned looks as follows:
 
 	{
@@ -31,9 +31,9 @@ The current auth flow is cookie bassed, however Once the auth middleware is deve
 
 <hr>
 
-##/users/
+## /users/
 
-###Post 
+### Post 
 	Crates a new temp user (They will need to validate their email or the account will stay as temp and be removed from the db). The user will have steps to complete in order to validate the account. See "User creation flow" for more info
 
 	Expected Body:
@@ -47,27 +47,27 @@ The current auth flow is cookie bassed, however Once the auth middleware is deve
 	  }
 	}
 
-###Get
+### Get
 	The logged in user will be returned (token owner). Else a 404 will be thrown
 
-###Put
+### Put
 	404
 
-###Delete
+### Delete
 	404 
 
 <hr>
 
-##/users/:id
+## /users/:id
 
-###Post -- Unimplemented
+### Post -- Unimplemented
 	In order to protect user privacy will return a 404
 
-###Get -- Needs to be updated
+### Get -- Needs to be updated
 	Will get the given user provided there is a logged in user
 	If the user doesn’t exist a 404 will be returned.
 
-###Put
+### Put
 	Will update the given users according properties
 	Takes a JSON user object in the body of the request
 		{
@@ -80,5 +80,5 @@ The current auth flow is cookie bassed, however Once the auth middleware is deve
 	Known Bugs
 		You can freely update the users email without having to re-validate.
 
-###Delete -- Unimplemented
+### Delete -- Unimplemented
 	If the logged in user matches will remove the user

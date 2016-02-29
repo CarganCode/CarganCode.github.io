@@ -5,7 +5,7 @@ description: Technology has the power to change the world
 head-img: '/images/ts.jpg'
 ---
 
-##TeenTech NY
+## TeenTech NY
 
 <iframe src="https://player.vimeo.com/video/111140027?title=0&byline=0" width="800" height="450" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
@@ -16,6 +16,6 @@ TeenTech NY is a project being pioneered by student technology leaders aged 14 t
 
 ---
 
-####Technologys Used
+#### Technologys Used
 
-#####Github/Jekyll, Sass, Vector grahpics, Leadrship
+##### Github/Jekyll, Sass, Vector grahpics, Leadrship

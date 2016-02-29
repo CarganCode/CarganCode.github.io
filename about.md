@@ -8,14 +8,14 @@ head-short: true
 ---
 
 
-##What makes me, me
+## What makes me, me
 
 I am a Computer Science student @ the University of Nottingham, technically Computer Science with Artificial Intelligence but that’s a bit of a mouthful. I'm also an amateur photographer, you can check out some of my favorite shots on my [Gallery][gallery]. I enjoy building websites and working on cool [Projects][projects].
 
 
 ---
 
-##The long version
+## The long version
 
 I’m international, I have lived all over the place. I’m one of those people that when you ask where they are from let out a sigh and ask if you’re sure you want to know. I was born in Brighton, England but have spent time living in Singapore and most recently New York, USA (if you couldn’t tell from the photos).
 
