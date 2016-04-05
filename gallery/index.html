@@ -87,7 +87,7 @@ description: I like taking pics, here are some of the good ones
         function build(data){
           console.log(data)
             for (r in data){
-              var fileName = "t" //data[r].filename.split("/").pop()
+              var fileName = data[r].filename.split("/").pop()
 
               var surl = data[r].surl
               var o = data[r].metadata.Orientation
