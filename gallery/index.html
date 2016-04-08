@@ -119,18 +119,15 @@ description: I like taking pics, here are some of the good ones
             var ddiv = "<div class='album_cont' id='infi'></div>"
             $(ddiv).appendTo('.post-content')
 
+
+            var temp_date
             for (date in pics){
-              
               for (var i=0;  i < pics[date].length ; i++){
-                index = i 
-                add(date, index)
-
-                if(i == Math.floor(pics[date].length / 2)){
-
-                }
+                add(date, i)
               }
             }
             initFreeWall("#infi")
+            //I fixed it man
           }
 
           function initFreeWall(id){
@@ -157,6 +154,7 @@ description: I like taking pics, here are some of the good ones
         var dist = [3,3,3,3,3,3,4,4,4,4,5]
         var MIN_RATE = 4
         function add(date, index, after){
+          console.log(index)
           var img_url = pics[date][index].surl
           var img_name = pics[date][index].img_name
           var media_link = pics[date][index].media_link
@@ -167,10 +165,11 @@ description: I like taking pics, here are some of the good ones
           var img_rating = pics[date][index].metadata['Rating']
           img_rating = img_rating ? img_rating : dist[Math.floor(Math.random() * dist.length)]
 
+          /*
           magic = Math.round(MIN_RATE - (Math.random() - 0.2))
           if(img_rating < magic)
             return
-
+          */
           var aspect = img_height/img_width
           var scale = (Math.pow(2, img_rating)) * 15
           
