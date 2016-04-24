@@ -167,9 +167,10 @@ description: I like taking pics, here are some of the good ones
 
           /*
           magic = Math.round(MIN_RATE - (Math.random() - 0.2))
-          if(img_rating < magic)
-            return
           */
+          if(img_rating <= 1)
+            return
+          
           var aspect = img_height/img_width
           var scale = (Math.pow(2, img_rating)) * 15
           
