@@ -195,6 +195,7 @@ description: I like taking pics, here are some of the good ones
           h = Math.round(h)
           w = Math.round(w)
           var le = h > w ? h : w // Long edge 
+          le = le < 120 ? 120 : le
           img_url += "=s" + le //So it loads the right size image 
 
           //console.log("scale: " + scale+ " rateing: " + img_rating  + " height: " + h + " width: " + w + " Orientation: "+ img_orientation)
