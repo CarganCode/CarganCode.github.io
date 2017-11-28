@@ -21,4 +21,4 @@ I have always been interested in computers and technology as a whole. Personally
 
 ## What I'm up to
 
-A major site overhall as of Feb 2016.
+A major site overhall as of November 2017.
