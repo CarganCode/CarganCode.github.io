@@ -21,4 +21,6 @@ I have always been interested in computers and technology as a whole. Personally
 
 ## What I'm up to
 
-A major site overhall as of November 2017.
+Lost in a tensor
+
+Studying hard and working on what I hope to be a pretty cooldissertation (lots of images and RNNs and Spark!)
