@@ -21,6 +21,6 @@ I have always been interested in computers and technology as a whole. Personally
 
 ## What I'm up to
 
-Lost in a tensor
+Most likely lost in a tensor
 
-Studying hard and working on what I hope to be a pretty cooldissertation (lots of images and RNNs and Spark!)
+Working on my PhD! (I know who would have guessed it). Playing with lots and lots of sattelite images, RNNs, CNNs, and Spark!
