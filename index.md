@@ -2,7 +2,7 @@
 layout: page
 head-img: '/images/ny.jpg'
 title:  Cargan&shy;Code
-description: Sometimes I do code... 
+description: Sometimes I do code...
 head-short: false
 ---
 
@@ -11,10 +11,10 @@ head-short: false
 I have always been interested in computers and technology as a whole. Personally I blame my dad for letting me play on his computer when I was younger. My passion has lead me to have some fantastic opportunities and meet some truly remarkable people. I love writing clean code, solving interesting problems and taking pictures. I find myself most productive with a fresh cup of coffee and some <i>sick tunes</i>.
 
 
-<div class="types"> 
-	{% include icons/teletype.svg %} 
+<div class="types">
+	{% include icons/teletype.svg %}
 	{% include icons/pencil_circle.svg %}
-	{% include icons/camra.svg %} 
+	{% include icons/camra.svg %}
 </div>
 
 ---
@@ -23,4 +23,6 @@ I have always been interested in computers and technology as a whole. Personally
 
 Most likely lost in a tensor
 
-Working on my PhD! (I know who would have guessed it). Playing with lots and lots of sattelite images, RNNs, CNNs, and Spark!
+Working on my PhD! (I know who would have guessed it). Playing with lots and lots of satellite images, RNNs, CNNs, and Spark!
+
+I have also realised that my website is woefully out of date and needs a big update (Nov 2021) so that's something to add to the list.
