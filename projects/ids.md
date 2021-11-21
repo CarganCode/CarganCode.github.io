@@ -2,7 +2,7 @@
 layout: page
 title: Solar Irradiance Forecasting
 description: Sometimes the sun does shine
-head-img: '/images/ts.jpg'
+head-img: '/images/ride.jpg'
 head-short: true
 ---
 
@@ -23,7 +23,7 @@ We compared this method do a number of ML models that used ground based weather 
 > Leveraging advancements in both the domains of machine learning and big data processing.
 
 
-The full paper can be [read here](/projects/disseration.pdf). [alt link](https://github.com/CarganCode/CarganCode.github.io/blob/master/projects/dissertation.pdf)
+The full paper can be [read here](/projects/dissertation.pdf).
 
 
 ---

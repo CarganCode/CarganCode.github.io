@@ -2,7 +2,7 @@
 layout: page
 title: Ph.D.
 description: Code name Zephyrus
-head-img: '/images/ts.jpg'
+head-img: '/images/wheel.jpg'
 head-short: true
 ---
 
