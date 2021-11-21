@@ -3,6 +3,7 @@ layout: page
 title: Ph.D.
 description: Code name Zephyrus
 head-img: '/images/ts.jpg'
+head-short: true
 ---
 
 ## Ph.D. [Code name zephyrus]

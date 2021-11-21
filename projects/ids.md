@@ -3,6 +3,7 @@ layout: page
 title: Solar Irradiance Forecasting
 description: Sometimes the sun does shine
 head-img: '/images/ts.jpg'
+head-short: true
 ---
 
 ## Dissertation

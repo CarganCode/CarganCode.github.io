@@ -14,7 +14,7 @@
 		  color: $titile-color;
 		}
 	}
-	
+
 	#tag-line{
 		text-align:center;
 		color: $titile-color;
@@ -26,7 +26,7 @@
 		float: right;
 		padding-right: 20px;
 		position: relative;
-		
+
 		.page-link {
 			padding-right: 20px;
 			color: #ecf0f1;
@@ -70,11 +70,11 @@
 
 }
 .head-img{
-	
+
   	width: 100%;
-  	height: 70%;
+  	height: 50%;
   	text-shadow: none;
-  	
+
   	.head-img-div {
   		animation: feature-bg-anim 1s ease-in-out;
   		height: 100%;
@@ -127,21 +127,21 @@
 }
 
 .head-short {
-	height: 50%;
+	height: 30%;
 }
 
 @media only screen and (max-device-width: 390px)  {
 	.site-header #site-title {
 		margin-top: 22px;
-		margin-bottom: 0;	
+		margin-bottom: 0;
 	}
 	.site-header #tag-line {
-		margin-top: 0;	
+		margin-top: 0;
 	}
 }
 @media only screen and (max-device-width: 285px)  {
 	.site-header #tag-line {
-		margin-bottom: 0;	
+		margin-bottom: 0;
 	}
 }
 
@@ -155,4 +155,3 @@
       	top: -208px;
     }
 }
-
