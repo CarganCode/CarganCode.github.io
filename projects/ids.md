@@ -23,6 +23,8 @@ We compared this method do a number of ML models that used ground based weather 
 
 
 The full paper can be [read here](/projects/disseration.pdf). [alt link](https://github.com/CarganCode/CarganCode.github.io/blob/master/projects/dissertation.pdf)
+
+
 ---
 
 #### Technologies Used:
