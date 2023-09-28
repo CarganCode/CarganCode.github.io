@@ -9,7 +9,8 @@
 		text-align:center;
 		margin: 0;
 		margin-top: 10px;
-		color: $titile-color;
+		color: adjust-color($titile-color, $alpha: -0.05);
+
 		a{
 		  color: $titile-color;
 		}
@@ -17,9 +18,9 @@
 
 	#tag-line{
 		text-align:center;
-		color: $titile-color;
+		color: adjust-color($titile-color, $alpha: -0.1);
 		margin: 10px;
-		   font-weight: lighter;
+		font-weight: lighter;
     	font-style: italic;
 	}
 	#nav {
@@ -29,8 +30,13 @@
 
 		.page-link {
 			padding-right: 20px;
-			color: #ecf0f1;
+			color: adjust-color($titile-color, $alpha: -0.2);
+
 		}
+		.page-link:hover {
+			color: adjust-color($titile-color, $alpha: -0.05);
+		}
+
 	}
 
 	.logo{

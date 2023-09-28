@@ -21,8 +21,9 @@ code {
 .highlight  {  
   text-align: left;   
   width: 700px;
+  max-width: 100%;
   margin: 0 auto;
-  }
+}
 .highlight .c { color: #a50; font-style: italic } /* Comment */
 .highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight .k { font-weight: bold; color: purple; } /* Keyword */

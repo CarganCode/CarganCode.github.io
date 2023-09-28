@@ -18,10 +18,15 @@
     }
   }
  } 
+
  .blog{
     text-align: left;
  }
+
  .post{
+  ol {
+    margin: 0 auto 20px 60px;
+  }
   p, blockquote{
     margin: 0 auto 20px auto;
     max-width: 800px;
@@ -29,7 +34,13 @@
    blockquote {
     p {
        margin: 0 0 20px 0;
+       max-width: 700px;
     }
+  }
+  img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
   }
  }
 
@@ -69,13 +80,16 @@
 	list-style-type: none;
   padding: 0;
 	
-	li { 
-    	margin-bottom: 30px;
-    	padding-left: 80px; 
-    	list-style-type: none;	
-      padding: 0;
+	ol { 
+    margin-bottom: 20px;
     }
-    
+  
+    img {
+      max-width: 100%;
+      display: block;
+      margin: auto;
+    }
+
     .post-link {
     	letter-spacing: -1px;
     	line-height: 1;
