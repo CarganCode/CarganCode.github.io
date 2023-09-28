@@ -80,16 +80,19 @@ a
   color: $link-color
   text-decoration: none
   outline: 0
-  
+
+a:visited
+  color: darken($link-color, 20%)
+
 a:hover, a:focus
-  color: lighten($link-color, 20%)
+  color: lighten($link-color, 8%)
   text-decoration: underline
 
 h1 a:hover, h1 a:focus, 
 a:hover h1, a:focus h1,
 a:hover h2, a:focus h2, 
 a:hover h3, a:focus h3
-  text-shadow: 0 1px 3px rgba(0,0,0,.3)
+  text-shadow: 0 1px 3px rgba(0,0,0,.05)
   text-decoration: none
 
 // Selection colors (easy to forget)
