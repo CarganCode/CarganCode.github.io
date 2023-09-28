@@ -33,11 +33,12 @@
             <h2>{{ post.title }}</h2>
           </a>
           
-
+          
           <hr>
-          <div class"post-exert"> {{ post.excerpt | markdown }} </div>
-          <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
-
+          <div class="post-exert"> {{ post.excerpt | markdown }} </div>
+          {% unless post.short %}
+            <a href="{{ post.url | prepend: site.baseurl }}"> read more... </a>
+          {% endunless %}
         </div>
       </li>
       <hr>
