@@ -8,7 +8,7 @@ head-short: true
 ---
 
 
-## What makes me, me
+## What makes me, me?
 
 I am a Computer Science student @ the University of Nottingham, technically Computer Science with Artificial Intelligence but that’s a bit of a mouthful.
 I'm also an amateur photographer, you can check out some of my favourite shots on my [Gallery][gallery].

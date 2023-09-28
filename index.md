@@ -25,4 +25,4 @@ Most likely lost in a tensor
 
 Working on my PhD! (I know who would have guessed it). Playing with lots and lots of satellite images, RNNs, CNNs, and Spark!
 
-I have also realised that my website is woefully out of date and needs a big update (Nov 2021) so that's something to add to the list.
+I have also realised that my website is woefully out of date and needs a big update (Sept 2023) so that's something to add to the list.

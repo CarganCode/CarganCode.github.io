@@ -11,15 +11,29 @@ head-short: true
 	<!-- <img class="img_center" src="/images/autocrat_logo.png"> -->
 	<a href="/projects/phd"><h3 class="project_title"> Ph.D. <normal style="color:gray"> | 2019 - Present </normal></h3></a>
 	<hr>
-		After a successful dissertation, I was offered a Ph.D.! We will build on the work done in the dissertation we hope to improve and expand it. We want to improve our forecasting methods and investigate optimisation methods for energy storage (e.g Batteries)
+	After a successful dissertation, I was offered a Ph.D.!
+	 My PhD is titled “Real World Solar Energy Power Prediction and Use Optimisation,” and focuses on developing and applying novel forecasting, planning and optimisation techniques for use with renewable energy.
+	 We will build on the work done in my the dissertation we hope to improve and expand it. 
+	 We want to improve our forecasting methods and investigate optimisation methods for energy storage (e.g Batteries)
 </div>
 
 <div class="project text_center">
-	<a href="https://github.com/TimCargan/alethia"> <h3> Aleitha <normal style="color:gray">| 2020 - Present </normal> </h3> </a>
+	<a href="https://github.com/TimCargan/chemise"><h3>Chemise <normal style="color:gray">| 2022 - Present </normal> </h3> </a>
 	<hr>
-	Another ML tracking library. I know, there are loads of them out there.
-	I decided to build my own as none of the ones out there exactly fit my workflow, and since I only use it for my Ph.D. work, I can make it as bespoke as I want.
-	It also is a fantastic way to play with some new tech / ideas and get better at writing code.
+	It started out with a plan to be a lightweight wrapper around <a href="https://github.com/google/flax">Flax</a>, a deep Learning library built for <a href="https://github.com/google/jax">JAX</a>, to take care of all the boiler plate.
+	Over time it has evolved into a Keras like library that I use to train all the models in my PhD over the last 18 months.
+	It can do a lot of fancy things thanks to the power of JAX;
+	Model and Data parallelism; automaticity working on multiple GPUs; logging of metrics; checkpoints and much more.
+	It supports loading data from tf-datasets (and im working on adding support for basic in memory datasets). 
+</div>
+
+<div class="project text_center">
+	<a href="https://github.com/TimCargan/eumetsat-downloader"><h3>EUMETSAT Downloader <normal style="color:gray">| 2020 - Present </normal> </h3> </a>
+	<hr>
+	A tool to download satellite imagery from <a herf=https://www.eumetsat.int/>EUMETSAT</a>, the European Organisation for the Exploitation of Meteorological Satellites (now that's a mouthful).
+	The library is designed to download the and process the high res, high frequency, images produced by the <a href="https://navigator.eumetsat.int/product/EO:EUM:DAT:MSG:HRSEVIRI">high rate SEVIRI</a> from the MSG satellites.
+	After downloading and loading the files into pngs, they can be loaded into a number of formats for various uses.
+
 </div>
 <!-- Dis -->
 <hr>
@@ -28,28 +42,37 @@ head-short: true
 <h3> Other stuff have done </h3>
 
 <div class="project text_center">
+	<a href="https://github.com/TimCargan/alethia"> <h3> Aleitha <normal style="color:gray">| 2020 - 2021 </normal> </h3> </a>
+	Another ML tracking library. I know, there are loads of them out there.
+	I decided to build my own as none of the ones out there exactly fit my workflow, and since I only use it for my Ph.D. work, I can make it as bespoke as I want.
+	It also is a fantastic way to play with some new tech / ideas and get better at writing code. 
+	I stopped working on this in summer 2022 and moved over to MLflow as it does almost everything I need.
+</div>
+
+<div class="project text_center">
 	<!-- <img class="img_center" src="/images/autocrat_logo.png"> -->
 	<a href="/projects/ids"><h3 class="project_title"> Dissertation <normal style="color:gray"> | 2018 - 2019 </normal></h3></a>
 	My dissertation, aka individual project. The goal of the project was to develop methods for forecasting solar energy.
 	I developed a machine learning model in TensorFlow that used satellite weather imagers to forecast irradiance.
 </div>
 
-	<!-- AutoCrat -->
-	<div class="project text_center">
-		<img class="img_center" src="/images/autocrat_logo.png">
-		<a href="/projects/autocrat"><h4 class="project_title">autoCrat <normal style="color:gray"> | 2013 - 2015 </normal></h4></a>
-		A Google Sheets Add-on used by over 80,000 people worldwide as a document merge utility for Google Drive. Originally build by Andrew Stillman for New Visions for public schools, the charity where volunteer, the Add-on version was rebuild from the ground up and is maintained by me.
-	</div>
 
-	<!-- TeenTechNY -->
-	<div class="project text_center">
-		<a href="/projects/teentech">
-		<img class="img_center" src="/images/ttny_logo.png">
-		<h4 class="project_title">TeenTech NY <normal style="color:gray">| 2014 - 2017 </normal> </h4> </a>
-		TeenTech is an interactive tech community run by teens for teens. Myself and a few other students are organisng the inaugural TeenTech NY conference. It will be held at Microsofts Offices.
-	</div>
+<!-- AutoCrat -->
+<div class="project text_center">
+	<img class="img_center" src="/images/autocrat_logo.png">
+	<a href="/projects/autocrat"><h4 class="project_title">autoCrat <normal style="color:gray"> | 2013 - 2015 </normal></h4></a>
+	A Google Sheets Add-on used by over 80,000 people worldwide as a document merge utility for Google Drive. Originally build by Andrew Stillman for New Visions for public schools, the charity where volunteer, the Add-on version was rebuild from the ground up and is maintained by me.
+</div>
 
-<h4> Blueprint <normal style="color:gray">| 2014 </normal> </h4>
-A highschool hackathon organised by HackMIT and Piolet, held a googles offices in cambriege (The one where MIT is!). The team I was part of worked on a multiplayer astroid style game.
+<!-- TeenTechNY -->
+<div class="project text_center">
+	<a href="/projects/teentech">
+	<img class="img_center" src="/images/ttny_logo.png">
+	<h4 class="project_title">TeenTech NY <normal style="color:gray">| 2014 - 2017 </normal> </h4> </a>
+	TeenTech is an interactive tech community run by teens for teens. Myself and a few other students are organisng the inaugural TeenTech NY conference. It will be held at Microsofts Offices.
+</div>
+
+<!-- <h4> Blueprint <normal style="color:gray">| 2014 </normal> </h4>
+A highschool hackathon organised by HackMIT and Piolet, held a googles offices in cambriege (The one where MIT is!). The team I was part of worked on a multiplayer astroid style game. -->
 
 </div>
