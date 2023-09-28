@@ -28,7 +28,7 @@ It turns out raw satellite data is big and all the tools are very old and not we
 To deal with that I wrote a [library](https://github.com/TimCargan/eumetsat-downloader) to download and process the raw data on our SLURM cluster.
 
 Our paper “Local-Global Methods for Generalised Solar Irradiance Forecasting,” developed generalised methods to forecast irradiance for locations with minimal historic data is currently under review. 
-Leveraging both weather and satellite data, our deep learning model was able to produce forecasts for any location.  
+Leveraging both weather and satellite data, our deep learning model was able to produce forecasts for any location. 
 We showed our model generalises well even to locations with no historical data or sensors at the location of interest
 A good place to go to see updates is my [zephyrus-public git repo](https://github.com/TimCargan/zephyrus-public).
 Unfortunately as of yet I can't publish the raw data, so running the code yourself is a bit hard, but this is something we are working on (reproducible results are a must).
