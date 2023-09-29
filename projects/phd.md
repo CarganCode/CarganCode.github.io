@@ -34,6 +34,13 @@ A good place to go to see updates is my [zephyrus-public git repo](https://githu
 Unfortunately as of yet I can't publish the raw data, so running the code yourself is a bit hard, but this is something we are working on (reproducible results are a must).
 
 
+
+#### Technologies Used:
+
+##### Python, TensorFlow, JAX, Spark
+
+---
+
 ## Phase 2
 
 Code name tulip, since it stated in the spring.
@@ -41,8 +48,4 @@ I am currently exploring the intersection of forecasting and optimisation using 
 The goal is to learn models that have prediction errors that cause a minimal effect on downstream optimization problems such as scheduling. 
 Our aim is to use DFL to build models that minimise the total carbon intensity of energy used in the setting of homes with both solar and batteries installed.
 
----
 
-#### Technologies Used:
-
-##### Python, TensorFlow, Spark
