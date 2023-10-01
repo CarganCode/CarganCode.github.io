@@ -8,11 +8,11 @@ categories: Snippet
 type: Code
 short: True
 ---
-Often I have data stored in python objects that aren't dataframes.
+I Often have data stored in python objects that aren't dataframes.
 Think config objects.
 Saving and loading these data objects to and from disk is often very helpful.
-The easiest way is to use `pickel`, however you almost always shouldn't.
-It is a security nightmare and can cause arbitrary code execution.
+The easiest way to save an arbitrary object is to use `pickel`, however you almost always shouldn't.
+It is a security nightmare and in the worst case can lead to arbitrary code execution.
 A safer alternative is to serialize the data:
 
 {% highlight javascript linnos %}   
