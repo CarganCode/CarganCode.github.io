@@ -9,7 +9,10 @@ github_username:  timcargan
 
 # Build settings
 permalink: pretty
-
+markdown: kramdown
+highlighter: rouge
+    input: GFM
+    
 paginate: 10
 paginate_path: "blog/page:num"
 excerpt_separator: <!--more-->
