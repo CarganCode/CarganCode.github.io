@@ -13,11 +13,11 @@ type: code
 
 If the tag-line of this post doesn't make any sense then you might not be up to speed of the current trend in deep learning, the _transformer_.
 I have been aware of the transformer architecture for a while now. 
-I spend time at work exploring models like bart, T5, and, like everyone else have seen the impressive GPT-3 demo from openAI.
-So, over christmas I decided it was time to get dig into the detail and truly get upto speed.
+I spend time at work exploring LLMs like bart, T5, and like everyone else have seen the impressive GPT-3 demo from openAI.
+So, over christmas I decided it was time to dig into the detail and truly get upto speed.
 
 
-A common use case of the transformers is for NLP, in the [orgnial paper](https://arxiv.org/abs/1706.03762) it was used for sequence to sequence machine translation.
+The original use case of the transformers is for NLP, in the [original paper](https://arxiv.org/abs/1706.03762) it was used for sequence to sequence machine translation.
 However, I'm not an NLP expert.
 I also know transformers are data hungry and I have easy access to a lot of satellite imagery (about 300GB).
 Fundamentally, the attention / transformer architecture just deals with sequences and there have been work to use them for images e.g ViT.
