@@ -5,7 +5,7 @@ author: Tim Cargan
 date: 2023-02-15
 tags: life
 categories: Snippet
-type: Code
+type: code
 short: True
 ---
 I often have data stored in python objects that aren't dataframes.
