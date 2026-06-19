@@ -27,11 +27,10 @@ After switching to using data from EUMetSat these issues compounded when trying 
 It turns out raw satellite data is big and all the tools are very old and not well suited to distributed frameworks like spark.
 To deal with that I wrote a [library](https://github.com/TimCargan/eumetsat-downloader) to download and process the raw data on our SLURM cluster.
 
-Our paper “Local-Global Methods for Generalised Solar Irradiance Forecasting,” developed generalised methods to forecast irradiance for locations with minimal historic data is currently under review. 
+Our paper “[Local-Global Methods for Generalised Solar Irradiance Forecasting](https://link.springer.com/article/10.1007/s10489-024-05273-9),” developed generalised methods to forecast irradiance for locations with minimal historic data is currently under review. 
 Leveraging both weather and satellite data, our deep learning model was able to produce forecasts for any location. 
 We showed our model generalises well even to locations with no historical data or sensors at the location of interest
-A good place to go to see updates is my [zephyrus-public git repo](https://github.com/TimCargan/zephyrus-public).
-Unfortunately as of yet I can't publish the raw data, so running the code yourself is a bit hard, but this is something we are working on (reproducible results are a must).
+A good place to go to see updates is my [public git repo](https://github.com/TimCargan/local-global-solar).
 
 
 
@@ -43,9 +42,27 @@ Unfortunately as of yet I can't publish the raw data, so running the code yourse
 
 ## Phase 2
 
-Code name tulip, since it stated in the spring.
-I am currently exploring the intersection of forecasting and optimisation using decision-focused learning. 
+Exploring the intersection of forecasting and optimisation using "decision-focused learning (DFL)". 
 The goal is to learn models that have prediction errors that cause a minimal effect on downstream optimization problems such as scheduling. 
-Our aim is to use DFL to build models that minimise the total carbon intensity of energy used in the setting of homes with both solar and batteries installed.
+Our aim is to use DFL to build models that minimise the total carbon intensity of energy used in the setting of homes with both solar and batteries installed!
 
+An obvious way to do this would be to use the final decision quality as a loss function rather than the prediction.
+This is what DFL attempts to do.
+A key issue that you need to solve when using DFL is that many optimisation processes are non-differentiable. 
+This is a bit of a problem problem when you want to train DNNs as they rely on gradient decent in order to learn.
+One of the ways to do this is to use surrogate methods to learn a differentiable proxy of the optimiser.
+
+You can checkout the code at the [directed-perturbations](https://github.com/TimCargan/directed-perturbations) repo. The work was presented at IJCNN 2025 and you can checkout the paper [here](https://ieeexplore.ieee.org/document/11227956)
+
+#### Technologies Used:
+
+##### Python, JAX, CVXPY
+
+--- 
+
+## Phase 3
+
+Integration of prediction and optimisation. Learning to optimise from partial observations!
+
+Can we combine the elements of DFL but sidestep the hard parts and just learn to optimise directly? That's the goal of the final part of my PhD.
 
