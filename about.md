@@ -1,19 +1,29 @@
 ---
 layout: page
-title: About
-description: Background, Research & Publications
+title: Who I am
+description: A little about me
 permalink: /about/
 head-img: '/images/aloha.jpg'
 head-short: true
 ---
 
-## Background
+## What makes me, me?
 
-I am a Computer Science PhD researcher in the Computational Optimisation and Learning Lab at the University of Nottingham (2019 - 2026), funded by an EPSRC studentship and supervised by Dr Isaac Triguero and Prof Dario Landa-Silva. My thesis, *Learning to Predict for Optimisation: from Predict-then-Optimise to Predict-and-Optimise*, was submitted in October 2026, with the viva scheduled for January 2027. Earlier, I completed a First-Class BSc (Hons) in Computer Science and AI with Year in Industry at Nottingham (2015 - 2019), receiving the Best Dissertation 2019 award and an Undergraduate High Achiever Award.
+I am a Computer Science PhD researcher in the Computational Optimisation and Learning Lab at the University of Nottingham (2019 - 2026), funded by an EPSRC studentship and supervised by Dr Isaac Triguero and Prof Dario Landa-Silva. I submitted my thesis, *Learning to Predict for Optimisation: from Predict-then-Optimise to Predict-and-Optimise*, in October 2026, with my viva scheduled for January 2027. Before starting the PhD, I completed a First-Class BSc (Hons) in Computer Science and AI with Year in Industry at Nottingham (2015 - 2019), winning the Best Dissertation 2019 award and an Undergraduate High Achiever Award.
 
-Alongside my doctorate, I have over seven years of part-time industry experience at Acora (formerly Elastacloud), progressing from Data and ML Engineering to Tech Lead and Senior Data Scientist on an enterprise search product. From 2019 to 2023, I also worked as a Teaching Assistant at Nottingham across Big Data and ML, Python, Java, and Haskell, including deploying cloud Apache Spark clusters for over 100 students.
+Alongside my doctorate, I have spent over seven years working part-time in industry at Acora (formerly Elastacloud), progressing from Data and ML Engineering through to Tech Lead and Senior Data Scientist on an enterprise search product. From 2019 to 2023, I was also a Teaching Assistant at Nottingham across Big Data and ML, Python, Java, and Haskell, including deploying cloud Apache Spark clusters for over 100 students.
 
-Having grown up across Brighton, Singapore, and New York, I spend time outside research climbing and taking photographs ([Gallery](/gallery/)).
+I also enjoy photography, building projects on the side ([Projects](/projects/)), and spending weekends climbing. Feel free to browse some of my photos in the [Gallery](/gallery/).
+
+---
+
+## The long version
+
+I'm international; I have lived all over the place. I'm one of those people that, when you ask where they are from, lets out a sigh and asks if you're sure you want to know. I was born in Brighton, England, and have spent time living in Singapore and New York, USA (if you couldn't tell from the photos).
+
+I have always had an interest in computers and how they work. I started programming when I was 14 (in Visual Basic). My foray into coding happened to line up with my move to Singapore, where I met teachers who really supported me and helped foster a real passion and interest in the subject. It was thanks to the skills I developed and the people I met in Singapore that, when I moved to New York, I was introduced to Andrew Stillman.
+
+I love travelling and have been fortunate enough to visit many places all over the world and meet some truly remarkable people along the way.
 
 ---
 
