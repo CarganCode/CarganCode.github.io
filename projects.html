@@ -1,40 +1,30 @@
 ---
 layout: page
 title: Projects
-description: Research, Open-Source Libraries & Engineering
+description: Some idea of what I'm up to
 head-img: '/images/van.jpg'
 head-short: true
 ---
 
-<h2>Research &amp; Engineering</h2>
+<h2>Research</h2>
 
 <div class="project">
-	<a href="/projects/phd/"><h3 class="project_title">PhD Research: Learning to Predict for Optimisation <normal style="color:gray">| 2019 - 2026 (Submitted)</normal></h3></a>
+	<a href="/projects/phd/"><h3 class="project_title">PhD Research: Learning to Predict for Optimisation</h3></a>
 	<hr>
 	<p>
-		Doctoral thesis at the University of Nottingham (viva January 2027), tracing the progression from decoupled Predict-then-Optimise pipelines to integrated Predict-and-Optimise systems. Covers global multi-site solar irradiance forecasting with Encoder-Decoder Transformers, evolutionary directed perturbations for surrogate decision-focused learning (IJCNN 2025), and RL-trained neural combinatorial optimisation policies in JAX and Flax used as task-gradient operators (reducing constraint violations on Image-KS from 34.9% to 14.3% and transferring positively to OR-Tools).
+		My PhD traces the progression from decoupled Predict-then-Optimise pipelines to integrated Predict-and-Optimise systems.
+		Covers global multi-site solar irradiance forecasting with Encoder-Decoder Transformers, evolutionary directed perturbations for surrogate decision-focused learning (IJCNN 2025),
+		and RL-trained neural combinatorial optimisation policies in JAX and Flax used as task-gradient operators.
 	</p>
 </div>
 
-<div class="project">
-	<a href="/projects/chemise/"><h3 class="project_title">chemise <normal style="color:gray">| 2022 - Present</normal></h3></a>
-	<hr>
-	<p>
-		Open-source training framework for <a href="https://github.com/google/flax">Flax</a> models in <a href="https://github.com/google/jax">JAX</a>, built to eliminate repetitive training-loop boilerplate while supporting multi-GPU data and model parallelism, checkpointing, metric logging, and dataset integration. Used across my doctoral research experiments. (<a href="https://github.com/TimCargan/chemise">GitHub repository</a>)
-	</p>
-</div>
-
-<div class="project">
+<!-- <div class="project">
 	<a href="/projects/industry/"><h3 class="project_title">Enterprise Search, Evaluation &amp; Python SDK at Acora <normal style="color:gray">| 2019 - Present</normal></h3></a>
 	<hr>
 	<p>
 		Tech Lead and Senior Data Scientist on an enterprise search team at Acora (formerly Elastacloud). Designed and maintain a shared Python SDK used by both production and offline evaluation pipelines, a 1,000+ task internal LLM evaluation benchmark and contribution web application, and agentic tool-calling workflows with semantic caching and adaptive RAG retrieval.
 	</p>
-</div>
-
-<hr>
-
-<h2>Open-Source Libraries &amp; Research Code</h2>
+</div> -->
 
 <div class="project">
 	<a href="https://github.com/TimCargan/directed-perturbations"><h3 class="project_title">Directed Perturbations for Surrogate DFL <normal style="color:gray">| 2025</normal></h3></a>
@@ -45,18 +35,31 @@ head-short: true
 </div>
 
 <div class="project">
-	<a href="/phd/2023/07/07/gpu-ga/"><h3 class="project_title">GPU-Accelerated Genetic Algorithms in JAX <normal style="color:gray">| 2023</normal></h3></a>
-	<hr>
-	<p>
-		Vectorised genetic algorithm built in JAX using <code>jax.vmap</code>, <code>jax.jit</code>, and <code>jax.lax.scan</code> to eliminate host-loop compilation overhead and batch 10,000 problem instances across a single GPU. (<a href="https://github.com/timcargan">GitHub profile</a>)
-	</p>
-</div>
-
-<div class="project">
 	<a href="https://github.com/TimCargan/local-global-solar"><h3 class="project_title">Local-Global Solar Forecasting <normal style="color:gray">| 2024</normal></h3></a>
 	<hr>
 	<p>
 		Experimental framework for our <a href="https://link.springer.com/article/10.1007/s10489-024-05273-9">Applied Intelligence (2024)</a> study on global cross-learning across distributed solar plants, including holdout site generalisation (GPH) and sensor-outage substitution (GPkN).
+	</p>
+</div>
+
+<hr>
+
+<h2>Open-Source Libraries &amp; Tools</h2>
+
+<div class="project">
+	<a href="/projects/chemise/"><h3 class="project_title">chemise <normal style="color:gray">| 2022 - 2025</normal></h3></a>
+	<hr>
+	<p>
+		My training framework for <a href="https://github.com/google/flax">Flax</a> models in <a href="https://github.com/google/jax">JAX</a>, built to eliminate repetitive training-loop boilerplate while supporting multi-GPU data and model parallelism, checkpointing, metric logging, and dataset integration.
+		I used it across my research experiments. (<a href="https://github.com/TimCargan/chemise">GitHub repository</a>)
+	</p>
+</div>
+
+<div class="project">
+	<a href="/phd/2023/07/07/gpu-ga/"><h3 class="project_title">GPU-Accelerated Genetic Algorithms in JAX <normal style="color:gray">| 2023</normal></h3></a>
+	<hr>
+	<p>
+		Vectorised genetic algorithm built in JAX using <code>jax.vmap</code>, <code>jax.jit</code>, and <code>jax.lax.scan</code> to eliminate host-loop compilation overhead and batch 10,000 problem instances across a single GPU. (<a href="https://github.com/timcargan">GitHub profile</a>)
 	</p>
 </div>
 
@@ -74,13 +77,13 @@ head-short: true
 
 <ol>
 	<li>
-		T. R. Cargan, D. Landa-Silva, and I. Triguero, "Directed perturbations for efficient learning of surrogate losses," in <em>International Joint Conference on Neural Networks (IJCNN)</em>, 2025. <a href="https://ieeexplore.ieee.org/document/11227956">DOI: 10.1109/IJCNN64981.2025.11227956</a>
+		<strong>T. R. Cargan</strong>, D. Landa-Silva, and I. Triguero, "Directed perturbations for efficient learning of surrogate losses," in <em>International Joint Conference on Neural Networks (IJCNN)</em>, 2025. <a href="https://ieeexplore.ieee.org/document/11227956">DOI: 10.1109/IJCNN64981.2025.11227956</a>
 	</li>
 	<li>
-		T. R. Cargan, D. Landa-Silva, and I. Triguero, "Local-global methods for generalised solar irradiance forecasting," <em>Applied Intelligence</em>, 2024. <a href="https://link.springer.com/article/10.1007/s10489-024-05273-9">DOI: 10.1007/s10489-024-05273-9</a>
+		<strong>T. R. Cargan</strong>, D. Landa-Silva, and I. Triguero, "Local-global methods for generalised solar irradiance forecasting," <em>Applied Intelligence</em>, 2024. <a href="https://link.springer.com/article/10.1007/s10489-024-05273-9">DOI: 10.1007/s10489-024-05273-9</a>
 	</li>
 	<li>
-		N. Alkhulaifi, I. G. Dogan, T. R. Cargan, A. L. Bowler, D. Pekaslan, N. J. Watson, and I. Triguero, "Decision-focused learning enhanced by automated feature engineering for energy storage optimisation," <em>Expert Systems with Applications</em>, vol. 302, p. 130554, 2026. <a href="https://doi.org/10.1016/j.eswa.2025.130554">DOI: 10.1016/j.eswa.2025.130554</a>
+		N. Alkhulaifi, I. G. Dogan, <strong>T. R. Cargan</strong>, A. L. Bowler, D. Pekaslan, N. J. Watson, and I. Triguero, "Decision-focused learning enhanced by automated feature engineering for energy storage optimisation," <em>Expert Systems with Applications</em>, vol. 302, p. 130554, 2026. <a href="https://doi.org/10.1016/j.eswa.2025.130554">DOI: 10.1016/j.eswa.2025.130554</a>
 	</li>
 </ol>
 
