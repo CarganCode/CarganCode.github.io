@@ -29,7 +29,7 @@
 		position: relative;
 
 		.page-link {
-			padding-right: 20px;
+			padding-right: 16px;
 			color: adjust-color($titile-color, $alpha: -0.2);
 
 		}
@@ -110,7 +110,7 @@
 	}
 	#nav {
 		top: -100%;
-		font-size: 27px;
+		font-size: 22px;
 		padding: 20px;
 		animation: feature-bg-anim 0.7s ease-in-out;
 	}

@@ -3,39 +3,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}CarganCode | {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="{{ site.description }}">
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-        <!-- Google Authorship and Publisher Markup -->
-    <!--link rel="publisher" href="https://plus.google.com/b/116170360752298759321" /-->
-
-    <!-- Schema.org markup for Google+ -->
+    <!-- Schema.org markup -->
     <meta itemprop="name" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta itemprop="description" content="{{ site.description }}">
-    <meta itemprop="image" content="http://cargancode.io/images/favicon.png">
+    <meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta itemprop="image" content="{{ site.url }}/images/favicon.png">
 
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@timcargan">
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-    <meta name="twitter:description" content="{{ site.description }}">
-    <!-- Twitter summary card with large image must be at least 280x150px -->
-    <meta name="twitter:image:src" content="http://cargancode.io/images/favicon.png">
+    <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image:src" content="{{ site.url }}/images/favicon.png">
 
     <!-- Open Graph data -->
-    <meta property="og:title" content="{{ site.title }}" />
+    <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://cargancode.io/" />
-    <meta property="og:image" content="http://cargancode.io/images/favicon.png" />
-    <meta property="og:description" content="{{ site.description }}" />
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
+    <meta property="og:image" content="{{ site.url }}/images/favicon.png" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
     <meta property="og:site_name" content="{{ site.title }}" />
 
-	<link rel="icon"type="image/png" href="/images/favicon.png?v=1">
+    <link rel="icon" type="image/png" href="/images/favicon.png?v=1">
     <!-- Custom CSS -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
 
     <!-- for mathjax support -->
     {% if page.usemathjax %}
@@ -46,21 +40,9 @@
             inlineMath: [['$', '$'], ['\\(', '\\)']]
           }
         };
-        </script>
-        <script id="MathJax-script" async
-          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-        </script>
-        
+    </script>
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
     {% endif %}
-
-    <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-70218617-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </head>
