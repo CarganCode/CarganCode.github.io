@@ -11,7 +11,7 @@
   }
   .column { 
   	display: table-cell;
-  	marign-bottom: 15px;
+  	margin-bottom: 15px;
   	padding: 0 5px; 
   	width: 33%;
   }
@@ -31,12 +31,18 @@
   color: $footer-color;
 }
 
+.site-footer li {
+  margin-bottom: 4px;
+}
+
 .github-icon-svg,
-.twitter-icon-svg {
+.linkedin-icon-svg,
+.scholar-icon-svg {
   display: inline-block;
   width: 16px;
   height: 16px;
   position: relative;
   top: 3px;
+  margin-right: 4px;
 }
 

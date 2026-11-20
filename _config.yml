@@ -1,11 +1,11 @@
 # Site settings
 title: CarganCode
-email: tim@cargancode.io
-description: "This is a website, yes I know. This is my website, the one and only Tim Cargan! on it you will find awesome pics and code and what ever else I feel like putting on it."
+description: "Timothy R. Cargan: PhD researcher in decision-focused learning and neural combinatorial optimisation (JAX/Flax), and Tech Lead / Senior Data Scientist."
 baseurl: ""
-url: "http://cargancode.io"
-twitter_username: timcargan
-github_username:  timcargan
+url: "https://cargancode.io"
+github_username: timcargan
+linkedin_username: timcargan
+google_scholar_url: "https://scholar.google.com/citations?user=O9O4vwUAAAAJ"
 
 # Build settings
 permalink: pretty
@@ -16,4 +16,11 @@ paginate_path: "blog/page:num"
 excerpt_separator: <!--more-->
 sass:
     sass_dir: css/
-    
+
+exclude:
+  - _archive
+  - _drafts
+  - todo.md
+  - Gemfile
+  - Gemfile.lock
+  - jekyll-klise-master.zip
