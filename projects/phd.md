@@ -1,68 +1,67 @@
 ---
 layout: page
-title: Ph.D.
-description: Code name Zephyrus
+title: PhD Research
+description: Learning to Predict for Optimisation
 head-img: '/images/wheel.jpg'
 head-short: true
 ---
-<div class="type"> 
-    {% include icons/pencil_circle.svg %}
-</div>
----
 
-My PhD is titled “Real World Solar Energy Power Prediction and Use Optimisation,” and focuses on developing and applying novel forecasting, planning and optimisation techniques for use with renewable energy.
-As renewables become a major source of energy, forecasting production and optimising energy use is key to grid stability. The rollout of; smart meters, domestic energy production, connected appliances, and battery technology present optimisation challenges/ opportunities not only on the commercial scale but at a household level. The amount of data being produced requires novel optimisation and ML techniques that work with existing big data paradigms.
-
-
-## Phase 1
-
-Code named Zephyrus, after one of the Greek gods of wind.
-My dissertation was focused on forecasting solar irradiance using satellite imagery and this is where we are starting the Ph.D. from.
-Our plan is to enhance the model and add rigour to the experimental framework used in my dissertation.
-The bulk of the machine learning modelling was done using FLAX/JAX.
-I made heavy use of TFDS to load the data in, however a fair bit of the pre-processing for the weather data was done in the cloud using spark.
-
-Over the years I have hit many tech issues around spark and images.
-After switching to using data from EUMetSat these issues compounded when trying to load and processing their raw data.
-It turns out raw satellite data is big and all the tools are very old and not well suited to distributed frameworks like spark.
-To deal with that I wrote a [library](https://github.com/TimCargan/eumetsat-downloader) to download and process the raw data on our SLURM cluster.
-
-Our paper “[Local-Global Methods for Generalised Solar Irradiance Forecasting](https://link.springer.com/article/10.1007/s10489-024-05273-9),” developed generalised methods to forecast irradiance for locations with minimal historic data is currently under review. 
-Leveraging both weather and satellite data, our deep learning model was able to produce forecasts for any location. 
-We showed our model generalises well even to locations with no historical data or sensors at the location of interest
-A good place to go to see updates is my [public git repo](https://github.com/TimCargan/local-global-solar).
-
-
-
-#### Technologies Used:
-
-##### Python, TensorFlow, JAX, Spark
+* **Title**: *Learning to Predict for Optimisation: from Predict-then-Optimise to Predict-and-Optimise*
+* **Institution**: School of Computer Science, University of Nottingham (Computational Optimisation and Learning Lab)
+* **Status**: Thesis submitted October 2026; viva January 2027 (EPSRC studentship)
+* **Supervisors**: Dr Isaac Triguero and Prof Dario Landa-Silva
 
 ---
 
-## Phase 2
+## Overview
 
-Exploring the intersection of forecasting and optimisation using "decision-focused learning (DFL)". 
-The goal is to learn models that have prediction errors that cause a minimal effect on downstream optimization problems such as scheduling. 
-Our aim is to use DFL to build models that minimise the total carbon intensity of energy used in the setting of homes with both solar and batteries installed!
+Decision-making pipelines classically separate parameter prediction from downstream optimisation. In this two-stage Predict-then-Optimise (PtO) setup, an upstream model is trained against symmetric statistical losses such as mean squared error (MSE), then passed to a solver that has no visibility into prediction uncertainty. Even small statistical errors can cause disproportionate decision regret and constraint violations.
 
-An obvious way to do this would be to use the final decision quality as a loss function rather than the prediction.
-This is what DFL attempts to do.
-A key issue that you need to solve when using DFL is that many optimisation processes are non-differentiable. 
-This is a bit of a problem problem when you want to train DNNs as they rely on gradient decent in order to learn.
-One of the ways to do this is to use surrogate methods to learn a differentiable proxy of the optimiser.
+This thesis traces the progression from decoupled PtO baselines through surrogate decision-focused learning to an integrated Predict-and-Optimise formulation, in which learned neural combinatorial solvers serve directly as differentiable task-gradient operators.
 
-You can checkout the code at the [directed-perturbations](https://github.com/TimCargan/directed-perturbations) repo. The work was presented at IJCNN 2025 and you can checkout the paper [here](https://ieeexplore.ieee.org/document/11227956)
+---
 
-#### Technologies Used:
+## 1. Multi-Site Solar Irradiance Forecasting
 
-##### Python, JAX, CVXPY
+The first stage examines the predictive foundation of decoupled PtO pipelines under locality bottlenecks, data scarcity, and sensor failures across distributed solar installations:
 
---- 
+* **Global cross-learning**: Unified Global models exploit spatial data symmetries across sites, consistently outperforming isolated per-site Local models while reducing performance variance across locations.
+* **Cold-start and outage resilience**: Evaluated Global Plant Holdout (GPH) to test generalisation to unseen locations with no local historical data, and formulated Global Plant k-Near (GPkN) to sustain forecasts during telemetry outages via proximal telemetry substitution.
+* **Multimodal architectures**: Built Encoder-Decoder Transformers fusing multi-spectral EUMETSAT SEVIRI satellite imagery with ground meteorological features, supported by a custom [EUMETSAT downloader](https://github.com/TimCargan/eumetsat-downloader) for SLURM preprocessing.
 
-## Phase 3
+While these baselines establish accurate and resilient statistical forecasts, minimising predictive error alone does not prevent downstream constraint violations, motivating end-to-end decision-focused methods. Published in *Applied Intelligence* (2024) with code at [local-global-solar](https://github.com/TimCargan/local-global-solar).
 
-Integration of prediction and optimisation. Learning to optimise from partial observations!
+---
 
-Can we combine the elements of DFL but sidestep the hard parts and just learn to optimise directly? That's the goal of the final part of my PhD.
+## 2. Surrogate Decision-Focused Learning
 
+The second stage investigates Decision-Focused Learning (DFL) via differentiable surrogate loss models (LODL), bridging predictors and non-differentiable optimisation solvers:
+
+* **Evolutionary directed perturbations**: To reduce the high cost of per-instance solver queries during surrogate fitting, I proposed an evolutionary directed-perturbation strategy that concentrates samples near decision boundaries, reaching surrogate convergence with up to 4x fewer solver evaluations on a solar-plus-battery dispatch task ([IJCNN 2025](https://ieeexplore.ieee.org/document/11227956), [directed-perturbations](https://github.com/TimCargan/directed-perturbations)).
+* **Cross-domain sensitivity study**: An expanded evaluation across domains showed acute hyperparameter fragility in surrogate-based DFL. Crucially, internal training diagnostics (such as surrogate fit quality and predictor task loss) fail to reliably track downstream decision quality, forcing candidate selection to rely on direct validation against expensive solvers.
+* **Applied energy storage collaboration**: Contributed to follow-on work combining decision-focused learning with automated feature engineering for energy storage optimisation (*Expert Systems with Applications*, 2026).
+
+---
+
+## 3. Neural Combinatorial Optimisation Policies as Task-Gradient Operators
+
+The final stage transitions to an integrated Predict-and-Optimise framework implemented from scratch in JAX and Flax, using RL-trained Neural Combinatorial Optimisation (NCO) policies as reusable task-gradient operators:
+
+* **JAX/Flax RL training stack**: Implemented policy-gradient training (PPO and GRPO-style advantages, GAE, Winner-Takes-All multi-policy populations, and self-distillation) for transformer-based knapsack and CVRP solvers. Profiled XLA dispatch and GPU memory throughout to run parallel multi-policy rollouts efficiently inside a single GPU's memory.
+* **Score-function gradients without solver calls**: By routing RL score-function gradients through the learned NCO policy back into the upstream predictor, the predictor internalises downstream constraint sensitivities without calling an external solver during training.
+* **Visual Knapsack (Image-KS) under uncertainty**: Under deterministic constraints, DFL offers minimal gain over MSE; under uncertain constraints, the Predict-and-Optimise predictor learns to trade marginal item value to cut constraint violations from 34.9% to 14.3%. In addition, the sequential construction order of the neural solver acts as a priority heuristic, recovering over half of the gap to an optimal repack when solutions are truncated at constraint boundaries.
+* **Cross-solver transfer (ETETS)**: Within an End-to-End Two Step protocol, predictors trained through the neural policy transfer positively to an exact classical solver (OR-Tools), reducing violations from 45.9% to 23.0% with lower decision regret than two-stage regression (0.1201 vs 0.1313). Adding an auxiliary MSE regulariser anchors parameter scale and cuts OR-Tools violations further to 3.7%, while pairing the predictor with the learned neural policy achieves even stronger feasibility. Pre-training the neural solver on clean instances stabilises co-training.
+
+---
+
+## Publications
+
+1. T. R. Cargan, D. Landa-Silva, and I. Triguero, *"Directed perturbations for efficient learning of surrogate losses"*, in *International Joint Conference on Neural Networks (IJCNN)*, 2025. [DOI: 10.1109/IJCNN64981.2025.11227956](https://ieeexplore.ieee.org/document/11227956)
+2. T. R. Cargan, D. Landa-Silva, and I. Triguero, *"Local-global methods for generalised solar irradiance forecasting"*, *Applied Intelligence*, 2024. [DOI: 10.1007/s10489-024-05273-9](https://link.springer.com/article/10.1007/s10489-024-05273-9)
+3. N. Alkhulaifi, I. G. Dogan, T. R. Cargan, A. L. Bowler, D. Pekaslan, N. J. Watson, and I. Triguero, *"Decision-focused learning enhanced by automated feature engineering for energy storage optimisation"*, *Expert Systems with Applications*, vol. 302, p. 130554, 2026. [DOI: 10.1016/j.eswa.2025.130554](https://doi.org/10.1016/j.eswa.2025.130554)
+
+---
+
+#### Core Stack
+
+##### Python, JAX, Flax, Optax, Orbax, CVXPY, OR-Tools, Apache Spark, SLURM, XLA profiling
